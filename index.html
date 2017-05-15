@@ -1,1 +1,35 @@
-hello, world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>leftmenu</title>
+	<meta name="description" content="" />
+</head>
+<body>
+	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+		
+	<div id="app"></div>
+	<script src="require.js"></script>
+	
+	<script>
+	
+		requirejs.config({
+			"react": "scripts/react.js",
+			"react-dom": "react-dom.js",
+			"leftmenu": "leftmenu.js"
+		});
+		
+		requirejs(["react", "react-dom"], function(react, reactDom)
+		{
+			
+			requirejs(["leftmenu"]), function(leftmenu)
+			{
+				new Main();
+			}
+		});
+	
+	</script>
+	
+</body>
+</html>
