@@ -153,6 +153,7 @@ body
 
 .two_columns
 {
+	width: 70%;
 	margin: auto;
 	column-count: 2;
 }
@@ -241,11 +242,13 @@ body
 	padding: 10px;
 	color: white;
 	background-color: deepskyblue;
+	max-width:500px;
 	min-width:300px;
 	border-radius:4px;
 	z-index: 10;
 	cursor: pointer;
 	position: relative;
+	text-align: left;
 }
 
 .content_phrase.right
@@ -256,4 +259,15 @@ body
 .hidden
 {
 	display: none;
+}
+
+.trn_hint
+{
+	background-color: deepskyblue;
+	position: absolute;
+}
+
+.word_list
+{
+	list-style: none;
 }

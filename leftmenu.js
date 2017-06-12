@@ -316,6 +316,7 @@ Lambda.find = function(it,f) {
 var Main = $hx_exports["Main"] = function() { };
 Main.__name__ = true;
 Main.main = function() {
+	data_Dictionary.init();
 	EventBus.init();
 	new logic_ContentController();
 	ReactDOM.render(React.createElement(App,{ }),window.document.getElementById("app"));
@@ -480,7 +481,7 @@ component_WordSelector.prototype = $extend(React_Component.prototype,{
 });
 var component_sidebar_LeftMenu = function() {
 	React_Component.call(this);
-	this.state = { list : [{ id : "function", title : "Function", subsections : [{ id : "greeting", title : "Greetings", type : content_a1_func_Greetings},{ id : "persinfo", title : "Personal Information", type : content_a1_func_PersonalInfo},{ id : "timedate", title : "Time and date", type : content_a1_func_TimeDate},{ id : "prices", title : "Price", type : content_a1_func_Prices},{ id : "direction", title : "Ask for direction", type : content_a1_func_AskDirections},{ id : "ticket", title : "Buying a ticket", type : content_a1_func_BuyTicket},{ id : "cafe", title : "Cafe/bar/restaurant", type : content_a1_func_CafeRestaurant},{ id : "renting", title : "Renting an appartment", type : content_a1_func_RentApartment}]},{ id : "grammar", title : "Grammar", subsections : [{ id : "nounverb", title : "Nouns and verbs", type : content_a1_gram_NounsAndVerbs},{ id : "behave", title : "To be, to have", type : content_a1_gram_ToBeToHave},{ id : "present", title : "Present tense", type : content_a1_gram_PresentTense},{ id : "negative", title : "Negation", type : content_a1_gram_Negation},{ id : "yesno", title : "Yes/No questions", type : content_a1_gram_YesNoQuestions},{ id : "whquestion", title : "Wh-questions", type : content_a1_gram_WhQuestions101},{ id : "andbut", title : "And, but, because", type : content_a1_gram_AndButBecause},{ id : "posession", title : "Posession", type : content_a1_gram_Possession},{ id : "anysome", title : "Quantifiers", type : content_a1_gram_Quantifiers},{ id : "thereis", title : "There is", type : content_a1_gram_ThereIs},{ id : "imperative", title : "Imperative", type : content_a1_gram_Imperative},{ id : "cancant", title : "Can/can't", type : content_a1_gram_CanCant},{ id : "prepplace", title : "Prepositions of place", type : content_a1_gram_PrepPlace},{ id : "preptime", title : "Prepositions of time", type : content_a1_gram_PrepTime},{ id : "prepdir", title : "Prepositions of direction", type : content_a1_gram_PrepDirection},{ id : "pastfutur", title : "Past and future 101", type : content_a1_gram_PastFuture},{ id : "wouldlike", title : "I would like to", type : content_a1_gram_WouldLike},{ id : "intensify", title : "Intensifiers", type : content_a1_gram_Intensifiers},{ id : "compatat", title : "Comparatives/superlatives", type : content_a1_gram_Comparative},{ id : "reflective", title : "Reflective verbs", type : content_a1_gram_Reflective}]},{ id : "vocabulary", title : "Vocabulary", subsections : [{ id : "basicverbs", title : "Verbs of 1st group", type : content_a1_voca_VerbsOfFirstGroup},{ id : "numbers", title : "Numbers", type : content_a1_voca_Numbers},{ id : "datetime", title : "Date & time", type : content_a1_voca_DateTime},{ id : "countries", title : "Countries", type : content_a1_voca_Countries},{ id : "professions", title : "Professions", type : content_a1_voca_Professions},{ id : "colors", title : "Colors", type : content_a1_voca_Colors},{ id : "foodstore", title : "Food", type : content_a1_voca_Food},{ id : "basicadj", title : "Basic adjectives", type : content_a1_voca_Adjectives1},{ id : "directions", title : "Directions in the city", type : content_a1_voca_CityNav},{ id : "clothing", title : "Clothes", type : content_a1_voca_Clothes},{ id : "bustrain", title : "Bus/train station", type : content_a1_voca_TrainStation},{ id : "cafebar", title : "Cafe/bar/restaurant", type : content_a1_voca_CafeBar},{ id : "compliments", title : "Compliments", type : content_a1_voca_Compliments}]}]};
+	this.state = { list : [{ id : "function", title : "Function", subsections : [{ id : "greeting", title : "Greetings", type : content_a1_func_Greetings},{ id : "persinfo", title : "Personal Information", type : content_a1_func_PersonalInfo},{ id : "timedate", title : "Time and date", type : content_a1_func_TimeDate},{ id : "prices", title : "Price", type : content_a1_func_Prices},{ id : "direction", title : "Ask for direction", type : content_a1_func_AskDirections},{ id : "ticket", title : "Buying a ticket", type : content_a1_func_BuyTicket},{ id : "cafe", title : "Cafe/bar/restaurant", type : content_a1_func_CafeRestaurant},{ id : "renting", title : "Renting an appartment", type : content_a1_func_RentApartment}]},{ id : "grammar", title : "Grammar", subsections : [{ id : "nounverb", title : "Nouns and verbs", type : content_a1_gram_NounsAndVerbs},{ id : "behave", title : "To be, to have", type : content_a1_gram_ToBeToHave},{ id : "present", title : "Present tense", type : content_a1_gram_PresentTense},{ id : "negative", title : "Negation", type : content_a1_gram_Negation},{ id : "yesno", title : "Yes/No questions", type : content_a1_gram_YesNoQuestions},{ id : "whquestion", title : "Wh-questions", type : content_a1_gram_WhQuestions101},{ id : "andbut", title : "And, but, because", type : content_a1_gram_AndButBecause},{ id : "posession", title : "Posession", type : content_a1_gram_Possession},{ id : "anysome", title : "Quantifiers", type : content_a1_gram_Quantifiers},{ id : "thereis", title : "There is", type : content_a1_gram_ThereIs},{ id : "imperative", title : "Imperative", type : content_a1_gram_Imperative},{ id : "cancant", title : "Can/can't", type : content_a1_gram_CanCant},{ id : "prepplace", title : "Prepositions of place", type : content_a1_gram_PrepPlace},{ id : "preptime", title : "Prepositions of time", type : content_a1_gram_PrepTime},{ id : "prepdir", title : "Prepositions of direction", type : content_a1_gram_PrepDirection},{ id : "pastfutur", title : "Past and future 101", type : content_a1_gram_PastFuture},{ id : "wouldlike", title : "I would like to", type : content_a1_gram_WouldLike},{ id : "intensify", title : "Intensifiers", type : content_a1_gram_Intensifiers},{ id : "compatat", title : "Comparatives/superlatives", type : content_a1_gram_Comparative},{ id : "reflective", title : "Reflective verbs", type : content_a1_gram_Reflective}]},{ id : "vocabulary", title : "Vocabulary", subsections : [{ id : "basicverbs", title : "Verbs of 1st group", type : content_a1_voca_VerbsOfFirstGroup},{ id : "numbers", title : "Numbers", type : content_a1_voca_Numbers},{ id : "datetime", title : "Date & time", type : content_a1_voca_DateTime},{ id : "countries", title : "Countries", type : content_a1_voca_Countries},{ id : "professions", title : "Professions", type : content_a1_voca_Professions},{ id : "colors", title : "Colors", type : content_a1_voca_Colors},{ id : "foodstore", title : "Food", type : content_a1_voca_Food},{ id : "basicadj", title : "Basic adjectives", type : content_a1_voca_Adjectives1},{ id : "directions", title : "Directions in the city", type : content_a1_voca_CityNav},{ id : "clothing", title : "Clothes", type : content_a1_voca_Clothes},{ id : "bustrain", title : "Bus/train station", type : content_a1_voca_TrainStation},{ id : "cafebar", title : "Cafe/bar/restaurant", type : content_a1_voca_CafeBar},{ id : "compliments", title : "Compliments", type : content_a1_voca_Compliments},{ id : "rent", title : "Renting an appartmenet", type : content_a1_voca_Apartment}]}]};
 };
 component_sidebar_LeftMenu.__name__ = true;
 component_sidebar_LeftMenu.__super__ = React_Component;
@@ -488,12 +489,13 @@ component_sidebar_LeftMenu.prototype = $extend(React_Component.prototype,{
 	render: function() {
 		var tmp = React.createElement("h1",{ },"Level A1");
 		var tmp1 = React.createElement("div",{ className : "sidebar_subheader"},tmp);
-		var tmp2 = this.mapList();
-		var tmp3 = React.createElement("ul",{ className : "sidebar_content"},tmp2);
-		return React.createElement("div",{ className : "sidebar"},tmp1,tmp3);
+		var tmp2 = React.createElement("div",{ onClick : $bind(this,this.onCardsClick), className : "section_btn"},"Cards");
+		var tmp3 = this.mapList();
+		var tmp4 = React.createElement("ul",{ className : "sidebar_content"},tmp3);
+		return React.createElement("div",{ className : "sidebar"},tmp1,tmp2,tmp4);
 	}
 	,mapList: function() {
-		var iconsList = ["book.svg","chat.svg","grammar.svg"];
+		var iconsList = ["chat.svg","grammar.svg","book.svg"];
 		var _g = [];
 		var _g1 = 0;
 		var _g2 = this.state.list;
@@ -503,6 +505,9 @@ component_sidebar_LeftMenu.prototype = $extend(React_Component.prototype,{
 			_g.push(React.createElement(component_sidebar_Level1Button,{ key : section.id, icon : iconsList[this.state.list.indexOf(section)], section : section}));
 		}
 		return _g;
+	}
+	,onCardsClick: function() {
+		EventBus.dispatch(event_Message.SetContent,{ type : content_a1_Cards});
 	}
 });
 var component_sidebar_Level1Button = function() {
@@ -537,6 +542,66 @@ component_sidebar_Level1Button.prototype = $extend(React_Component.prototype,{
 		return _g;
 	}
 });
+var component_vocabulary_Hint = function(props,context) {
+	React_Component.call(this,props,context);
+};
+component_vocabulary_Hint.__name__ = true;
+component_vocabulary_Hint.__super__ = React_Component;
+component_vocabulary_Hint.prototype = $extend(React_Component.prototype,{
+	render: function() {
+		var hintClass = this.props.hintShown ? "trn_hint" : "hidden";
+		return React.createElement("div",{ style : { "left" : this.props.hintX + "px", "top" : this.props.hintY + "px"}, className : hintClass},this.props.hintText);
+	}
+});
+var component_vocabulary_VocabularyPage = function(props,context) {
+	React_Component.call(this,props,context);
+};
+component_vocabulary_VocabularyPage.__name__ = true;
+component_vocabulary_VocabularyPage.__super__ = React_Component;
+component_vocabulary_VocabularyPage.prototype = $extend(React_Component.prototype,{
+	componentWillMount: function() {
+		this.setState({ hintX : 0, hintY : 0, hintShown : false, hintText : "", hintWord : ""});
+	}
+	,renderWordElements: function() {
+		var _g = [];
+		var _g1 = 0;
+		var _g2 = this.words;
+		while(_g1 < _g2.length) {
+			var word = _g2[_g1];
+			++_g1;
+			_g.push(React.createElement("li",{ key : word.word, onClick : $bind(this,this.onWordClick)},word.word));
+		}
+		return _g;
+	}
+	,getWordByText: function(innerText) {
+		var _g = 0;
+		var _g1 = this.words;
+		while(_g < _g1.length) {
+			var word = _g1[_g];
+			++_g;
+			if(word.word == innerText) {
+				return word;
+			}
+		}
+		return null;
+	}
+	,onWordClick: function(e) {
+		var target = e.currentTarget;
+		var rect = target.getBoundingClientRect();
+		var word = this.getWordByText(target.innerText);
+		var hintShown = word.word != this.state.hintWord;
+		var lastWord = hintShown ? word.word : "";
+		this.setState({ hintShown : hintShown, hintText : word.trn, hintWord : lastWord, hintX : rect.left, hintY : rect.top});
+	}
+	,render: function() {
+		var tmp = React.createElement(component_Title,{ text : this.title});
+		var tmp1 = this.renderWordElements();
+		var tmp2 = React.createElement("ul",{ className : "word_list"},tmp1);
+		var tmp3 = React.createElement("div",{ className : "two_columns"},tmp2);
+		var tmp4 = React.createElement(component_vocabulary_Hint,{ hintX : this.state.hintX, hintY : this.state.hintY, hintShown : this.state.hintShown, hintText : this.state.hintText});
+		return React.createElement("div",{ className : "content_page"},tmp,tmp3,tmp4);
+	}
+});
 var content_ContentContainer = function() {
 	React_Component.call(this);
 	EventBus.listen(event_Message.SetView,$bind(this,this.onSetView));
@@ -565,6 +630,124 @@ content_NotFound.prototype = $extend(React_Component.prototype,{
 		return React.createElement("div",{ className : "content_page"},tmp);
 	}
 });
+var content_a1_Cards = function(props,context) {
+	React_Component.call(this,props,context);
+};
+content_a1_Cards.__name__ = true;
+content_a1_Cards.__super__ = React_Component;
+content_a1_Cards.prototype = $extend(React_Component.prototype,{
+	componentWillMount: function() {
+		this.words = [];
+		this.categories = [];
+		var category = data_Dictionary.map.keys();
+		while(category.hasNext()) {
+			var category1 = category.next();
+			this.categories.push(category1);
+		}
+		this.categories.sort(function(a,b) {
+			if(a > b) {
+				return 1;
+			} else {
+				return -1;
+			}
+		});
+		this.setState({ front : false, panelShown : false, cardsTotal : 0, cardsDone : 0, currentCard : 0});
+	}
+	,render: function() {
+		var cardClass = this.state.front ? "rotate_0 card" : "rotate_y card";
+		var panelClass = this.state.panelShown ? "panel panel_shown" : "panel";
+		var tmp = React.createElement("div",{ onClick : $bind(this,this.onPanelToggle), className : "button_panel"},"Show config");
+		var tmp1 = React.createElement("span",{ className : "config_section_title"},"Languages");
+		var tmp2 = React.createElement("br",{ });
+		var tmp3 = this.renderCategories();
+		var tmp4 = React.createElement("div",{ id : "config_section_content", className : "config_section_content"},tmp3);
+		var tmp5 = React.createElement("div",{ className : "config_section"},tmp1,tmp2,tmp4);
+		var tmp6 = React.createElement("button",{ },"Shuffle");
+		var tmp7 = React.createElement("button",{ },"Reset");
+		var tmp8 = React.createElement("button",{ },"Stats");
+		var tmp9 = React.createElement("div",{ className : "config_section"},tmp6,tmp7,tmp8);
+		var tmp10 = React.createElement("div",{ className : "config_panel"},tmp5,tmp9);
+		var tmp11 = React.createElement("div",{ className : panelClass},tmp,tmp10);
+		var tmp12 = this.renderCardWords();
+		var tmp13 = React.createElement("div",{ className : "card_content side_a"},tmp12);
+		var tmp14 = this.renderCardTrns();
+		var tmp15 = React.createElement("div",{ className : "card_content side_b"},tmp14);
+		var tmp16 = React.createElement("div",{ className : cardClass},tmp13,tmp15);
+		var tmp17 = React.createElement("div",{ onClick : $bind(this,this.onCardClick), className : "main_card"},tmp16);
+		var tmp18 = React.createElement("div",{ className : "main_card_container"},tmp17);
+		var tmp19 = React.createElement("div",{ className : "small_card_content"},this.state.cardsTotal - this.state.cardsDone - 1);
+		var tmp20 = React.createElement("div",{ onClick : $bind(this,this.onLeftCardsClick), className : "small_card side_a"},tmp19);
+		var tmp21 = React.createElement("div",{ className : "small_card_content"},this.state.cardsDone);
+		var tmp22 = React.createElement("div",{ className : "small_card side_b"},tmp21);
+		var tmp23 = React.createElement("div",{ className : "small_card_container"},tmp20,tmp22);
+		return React.createElement("div",{ className : "game_container"},tmp11,tmp18,tmp23);
+	}
+	,renderCategories: function() {
+		var _g = [];
+		var _g1 = 0;
+		var _g2 = this.categories;
+		while(_g1 < _g2.length) {
+			var category = _g2[_g1];
+			++_g1;
+			var tmp = React.createElement("input",{ name : category, value : category, type : "checkbox", onClick : $bind(this,this.onCheckboxChanged)});
+			_g.push(React.createElement("p",{ key : category},tmp," ",category," "));
+		}
+		return _g;
+	}
+	,renderCardWords: function() {
+		var cardWords = this.words.slice(this.state.currentCard * 5,(this.state.currentCard + 1) * 5);
+		var _g = [];
+		var _g1 = 0;
+		while(_g1 < cardWords.length) {
+			var word = cardWords[_g1];
+			++_g1;
+			_g.push(React.createElement("p",{ key : word.word},word.word));
+		}
+		return _g;
+	}
+	,renderCardTrns: function() {
+		var cardWords = this.words.slice(this.state.currentCard * 5,(this.state.currentCard + 1) * 5);
+		var _g = [];
+		var _g1 = 0;
+		while(_g1 < cardWords.length) {
+			var word = cardWords[_g1];
+			++_g1;
+			_g.push(React.createElement("p",{ key : word.word},word.trn == "" ? "..." : word.trn));
+		}
+		return _g;
+	}
+	,onCheckboxChanged: function() {
+		this.words = [];
+		var checkboxesParent = window.document.getElementById("config_section_content");
+		var _g = 0;
+		var _g1 = checkboxesParent.childNodes;
+		while(_g < _g1.length) {
+			var element = _g1[_g];
+			++_g;
+			var checkbox = element.firstChild;
+			if(checkbox != null && checkbox.checked) {
+				var key = checkbox.value;
+				var _this = data_Dictionary.map;
+				this.words = this.words.concat(__map_reserved[key] != null ? _this.getReserved(key) : _this.h[key]);
+			}
+		}
+		this.words = utils_ArrayUtil.shuffle(this.words,Math.random);
+		this.setState({ front : this.state.front, panelShown : this.state.panelShown, cardsTotal : Math.ceil(this.words.length / 5), cardsDone : 0, currentCard : 0});
+	}
+	,onCardClick: function() {
+		this.setState({ front : !this.state.front, panelShown : this.state.panelShown, cardsTotal : this.state.cardsTotal, cardsDone : this.state.cardsDone, currentCard : this.state.currentCard});
+	}
+	,onLeftCardsClick: function(e) {
+		if(this.state.cardsDone >= this.state.cardsTotal - 1) {
+			this.setState({ front : this.state.front, panelShown : this.state.panelShown, cardsTotal : this.state.cardsTotal, cardsDone : 0, currentCard : 0});
+		} else {
+			this.setState({ front : this.state.front, panelShown : this.state.panelShown, cardsTotal : this.state.cardsTotal, cardsDone : this.state.cardsDone + 1, currentCard : this.state.currentCard + 1});
+		}
+	}
+	,onPanelToggle: function() {
+		this.setState({ front : this.state.front, panelShown : !this.state.panelShown, cardsTotal : this.state.cardsTotal, cardsDone : this.state.cardsDone, currentCard : this.state.currentCard});
+	}
+});
 var content_a1_func_AskDirections = function(props,context) {
 	React_Component.call(this,props,context);
 };
@@ -584,7 +767,20 @@ content_a1_func_BuyTicket.__name__ = true;
 content_a1_func_BuyTicket.__super__ = React_Component;
 content_a1_func_BuyTicket.prototype = $extend(React_Component.prototype,{
 	render: function() {
-		return React.createElement("div",{ className : "content_page"},"Bonjour Monsieur, comment puis-je vous aider ? ","Bonjour, un billet pour Lyon s'il-vous-plaît ","D'accord monsieur, aller-simple ou aller-retour?","Vous voulez coin fenêtre ou coin couloir?","Je voudrais le coin fenêtre.","Est-ce un train direct ?","Oui, c'est un train direct. ","une correspondance","Oui, ça fait combien ?","500 Roupies s'il-vous-plaît","The first/last/next train\tLe premier/dernier/prochain train","Is this the right platform for the Paris train?\tEst-ce que c’est le bon quai pour le train de Paris?","First/Second class\tPremière/Seconde classe","Punch your ticket\tComposter de billet","Where can I find a taxi?\tOù est - ce que je peux trouver un taxi?","Je voudrais aller à Strasbourg le 17 janvier dans l’après-midi. Y a-t-il un train vers 13 h 14 h ?","Y a-t-il un point d'argent dans la gare?","les guichets","Une seconde, Mademoiselle. Oui, il y en a mais plus tard, à 15h 30. Ca vous va ?","Oui, oui, ça va. Ce n’est pas trop tard. Est-ce qu’il est direct ?","Il arrive à Strasbourg à quelle heure, s’il vous plaît ?","A 18h15","Ca coûte combien le billet?","Pour Strasbourg dans un express, ça coûte 75 € le billet.","Alors donnez-moi un billet pour un adulte.","Wagon non-fumeur","quelle ligne de métro il faut prendre ?","un aller-retour");
+		this.phrases = [{ "text" : "Bonjour Monsieur, comment puis-je vous aider ?"},{ "text" : "Bonjour, un billet pour Lyon s'il-vous-plaît ", "right" : true},{ "text" : "D'accord monsieur, aller-simple ou aller-retour?"},{ "text" : "Vous voulez coin fenêtre ou coin couloir?"},{ "text" : "Je voudrais le coin fenêtre.", "right" : true},{ "text" : "Est-ce un train direct ?", "right" : true},{ "text" : "Oui, c'est un train direct. "},{ "text" : "une correspondance"},{ "text" : "Oui, ça fait combien ?", "right" : true},{ "text" : "500 Roupies s'il-vous-plaît"},{ "text" : "The first/last/next train\tLe premier/dernier/prochain train"},{ "text" : "Est-ce que c’est le bon quai pour le train de Paris?", "right" : true},{ "text" : "Première/Seconde classe"},{ "text" : "Composter de billet"},{ "text" : "Où est-ce que je peux trouver un taxi?", "right" : true},{ "text" : "Je voudrais aller à Strasbourg le 17 janvier dans l’après-midi. Y a-t-il un train vers 13 h 14 h ?", "right" : true},{ "text" : "Y a-t-il un point d'argent dans la gare?", "right" : true},{ "text" : "les guichets"},{ "text" : "Une seconde, Mademoiselle. Oui, il y en a mais plus tard, à 15h 30. Ca vous va ?"},{ "text" : "Oui, oui, ça va. Ce n’est pas trop tard. Est-ce qu’il est direct ?", "right" : true},{ "text" : "Il arrive à Strasbourg à quelle heure, s’il vous plaît ?", "right" : true},{ "text" : "A 18h15"},{ "text" : "Ca coûte combien le billet?", "right" : true},{ "text" : "Pour Strasbourg dans un express, ça coûte 75 € le billet."},{ "text" : "Alors donnez-moi un billet pour un adulte.", "right" : true},{ "text" : "Wagon non-fumeur", "right" : true},{ "text" : "quelle ligne de métro il faut prendre ?", "right" : true},{ "text" : "un aller-retour"}];
+		var tmp = this.mapList();
+		return React.createElement("div",{ className : "content_page"},tmp);
+	}
+	,mapList: function() {
+		var _g = [];
+		var _g1 = 0;
+		var _g2 = this.phrases;
+		while(_g1 < _g2.length) {
+			var phrase = _g2[_g1];
+			++_g1;
+			_g.push(React.createElement(component_MessageWithSelector,{ key : phrase.text, list : [phrase.text], right : phrase.right}));
+		}
+		return _g;
 	}
 });
 var content_a1_func_CafeRestaurant = function(props,context) {
@@ -594,7 +790,20 @@ content_a1_func_CafeRestaurant.__name__ = true;
 content_a1_func_CafeRestaurant.__super__ = React_Component;
 content_a1_func_CafeRestaurant.prototype = $extend(React_Component.prototype,{
 	render: function() {
-		return React.createElement("div",{ className : "content_page"},"Je voudrais réserver une table pour trois personnes, pour dîner, s'il vous plaît.","Je voudrais une table pour trois personnes, pour dîner, s'il vous plaît.","Vous avez une reservation?","Non, je n'ai pas de reservation.","Oui, la table est réservé à Fred","Oui, J’ai telephoné hier. Je m’appelle Sue Jones.","Et pour le dîner, que voudriez - vous?","Je voudrais de l'eau.","Je voudrais un verre d'eau.","Et pour dîner, vous avez choisi ?","Je voudrais le menu à 15 Euros.","Je voudrais le steak frites.","Bien Monsieur/Madame, quelle cuisson ?","Bien cuit, s'il vous plaît. Non, à point, s'il vous plaît.","Et, excusez-moi, où sont les toilettes ?","Au sous-sol.","Je ne comprends pas. Vous pouvez répéter s'il vous plaît ?","Vous descendez l'escalier.","Au fond du couloir.","Comment vous trouvez votre steak frites ?","C'est délicieux. C'est parfait.","L'addition s'il vous plaît.","Bien Monsieur / Madame. Vous pouvez payer à la caisse.","Salut ! Je voudrai voir la carte s’il vous plaît.","Donc, une table pour deux personnes et deux bières, s’il vous plaît.","Comment trouvez - vous votre repas?","Voici la carte.","Je vous apporte ca tout de suite.","Je reviens dans un instant pour prendre votre commande.","Est - ce que vous etes pret a commander?","Je prendrai","Laissez - moi prendre votre menu","C'est tres aimable a vous","Tout s'est bien passe?","C'etais delicieux, merci.","Desirez - vous prendre un dessert?","C'est un de nos meilleurs desserts","Je vous lasse quand - meme le menu, pour que vous puissiez choisir","Souhaitez-vous prendre un cafe?","Non, merci, ca sera tout.","Pour moi un café","Acceptez-vous les cartes?");
+		this.phrases = [{ "text" : "Je voudrais réserver une table pour trois personnes, pour dîner, s'il vous plaît.", "right" : true},{ "text" : "Je voudrais une table pour trois personnes, pour dîner, s'il vous plaît.", "right" : true},{ "text" : "Vous avez une reservation?"},{ "text" : "Non, je n'ai pas de reservation.", "right" : true},{ "text" : "Oui, la table est réservé à Fred", "right" : true},{ "text" : "Oui, J’ai telephoné hier. Je m’appelle Sue Jones.", "right" : true},{ "text" : "Et pour le dîner, que voudriez - vous?"},{ "text" : "Je voudrais de l'eau.", "right" : true},{ "text" : "Je voudrais un verre d'eau.", "right" : true},{ "text" : "Et pour dîner, vous avez choisi ?"},{ "text" : "Je voudrais le menu à 15 Euros.", "right" : true},{ "text" : "Je voudrais le steak frites.", "right" : true},{ "text" : "Bien Monsieur/Madame, quelle cuisson ?"},{ "text" : "Bien cuit, s'il vous plaît. Non, à point, s'il vous plaît.", "right" : true},{ "text" : "Et, excusez-moi, où sont les toilettes ?", "right" : true},{ "text" : "Au sous-sol."},{ "text" : "Je ne comprends pas. Vous pouvez répéter s'il vous plaît ?", "right" : true},{ "text" : "Vous descendez l'escalier."},{ "text" : "Au fond du couloir."},{ "text" : "Comment vous trouvez votre steak frites ?"},{ "text" : "C'est délicieux. C'est parfait.", "right" : true},{ "text" : "L'addition s'il vous plaît.", "right" : true},{ "text" : "Bien Monsieur / Madame. Vous pouvez payer à la caisse."},{ "text" : "Salut ! Je voudrai voir la carte s’il vous plaît.", "right" : true},{ "text" : "Donc, une table pour deux personnes et deux bières, s’il vous plaît.", "right" : true},{ "text" : "Comment trouvez - vous votre repas?"},{ "text" : "Voici la carte."},{ "text" : "Je vous apporte ca tout de suite."},{ "text" : "Je reviens dans un instant pour prendre votre commande."},{ "text" : "Est - ce que vous etes pret a commander?"},{ "text" : "Je prendrai", "right" : true},{ "text" : "Laissez - moi prendre votre menu"},{ "text" : "C'est tres aimable a vous", "right" : true},{ "text" : "Tout s'est bien passe?"},{ "text" : "C'etais delicieux, merci.", "right" : true},{ "text" : "Desirez - vous prendre un dessert?"},{ "text" : "C'est un de nos meilleurs desserts"},{ "text" : "Je vous lasse quand - meme le menu, pour que vous puissiez choisir"},{ "text" : "Souhaitez-vous prendre un cafe?"},{ "text" : "Non, merci, ca sera tout.", "right" : true},{ "text" : "Pour moi un café", "right" : true},{ "text" : "Acceptez-vous les cartes?", "right" : true}];
+		var tmp = this.mapList();
+		return React.createElement("div",{ className : "content_page"},tmp);
+	}
+	,mapList: function() {
+		var _g = [];
+		var _g1 = 0;
+		var _g2 = this.phrases;
+		while(_g1 < _g2.length) {
+			var phrase = _g2[_g1];
+			++_g1;
+			_g.push(React.createElement(component_MessageWithSelector,{ key : phrase.text, list : [phrase.text], right : phrase.right}));
+		}
+		return _g;
 	}
 });
 var content_a1_func_Greetings = function(props,context) {
@@ -704,7 +913,20 @@ content_a1_func_RentApartment.__name__ = true;
 content_a1_func_RentApartment.__super__ = React_Component;
 content_a1_func_RentApartment.prototype = $extend(React_Component.prototype,{
 	render: function() {
-		return React.createElement("div",{ className : "content_page"},"Combien coute le louer?","C'est 450 euros par mois, charges comprises","Est - ce que vous exigez une caution?","Je demande une caution equivalente a un mois de loyer","Quand le loyer doit - il etre paye","Le 1re de chaque mois en avance","L'appartement est-il meuble?","Combien de pieces y a-t-il dans l'appartement","Il y a en tout 5 pieces","Est - ce que les animaux domestique sont autorises","Non, malheureusement","Il y a un supermarche a deux minutes d'ici","Je vais prendre l'appartement","Bonjour, je cherche une chambre à louer.  Auriez - vous quelque chose à me proposer ?","Naturellement. Vous cherchez quelques chose de précis ?","Je voudrais un studio près du centre de la ville ou avec des transports en commun à proximité.","Est - ce que vous souhaitez un appartement meublé?","Combien êtes-vous prêt à dépenser en loyer tous les mois ?","Ah, oui ! Je dirais 400 euros. Mais pas plus.","Très bien. J'ai un studio meublé à deux pas de notre agence. ","Si vous pouvez attendre 10 minutes on pourrait aller le visiter tout à l'heure.");
+		this.phrases = [{ "text" : "Bonjour, je cherche une chambre à louer.  Auriez - vous quelque chose à me proposer ?", "right" : true},{ "text" : "Naturellement. Vous cherchez quelques chose de précis ?"},{ "text" : "Combien coute le louer?", "right" : true},{ "text" : "C'est 450 euros par mois, charges comprises"},{ "text" : "Est - ce que vous exigez une caution?", "right" : true},{ "text" : "Je demande une caution equivalente a un mois de loyer"},{ "text" : "Quand le loyer doit - il etre paye"},{ "text" : "Le 1re de chaque mois en avance"},{ "text" : "L'appartement est-il meuble?", "right" : true},{ "text" : "Combien de pieces y a-t-il dans l'appartement", "right" : true},{ "text" : "Il y a en tout 5 pieces"},{ "text" : "Est - ce que les animaux domestique sont autorises", "right" : true},{ "text" : "Non, malheureusement"},{ "text" : "Il y a un supermarche a deux minutes d'ici"},{ "text" : "Je vais prendre l'appartement", "right" : true},{ "text" : "Je voudrais un studio près du centre de la ville ou avec des transports en commun à proximité.", "right" : true},{ "text" : "Est - ce que vous souhaitez un appartement meublé?"},{ "text" : "Combien êtes-vous prêt à dépenser en loyer tous les mois ?"},{ "text" : "Ah, oui ! Je dirais 400 euros. Mais pas plus.", "right" : true},{ "text" : "Très bien. J'ai un studio meublé à deux pas de notre agence. "},{ "text" : "Si vous pouvez attendre 10 minutes on pourrait aller le visiter tout à l'heure."}];
+		var tmp = this.mapList();
+		return React.createElement("div",{ className : "content_page"},tmp);
+	}
+	,mapList: function() {
+		var _g = [];
+		var _g1 = 0;
+		var _g2 = this.phrases;
+		while(_g1 < _g2.length) {
+			var phrase = _g2[_g1];
+			++_g1;
+			_g.push(React.createElement(component_MessageWithSelector,{ key : phrase.text, list : [phrase.text], right : phrase.right}));
+		}
+		return _g;
 	}
 });
 var content_a1_func_TimeDate = function(props,context) {
@@ -1124,331 +1346,136 @@ content_a1_gram_YesNoQuestions.prototype = $extend(React_Component.prototype,{
 	}
 });
 var content_a1_voca_Adjectives1 = function(props,context) {
-	React_Component.call(this,props,context);
+	component_vocabulary_VocabularyPage.call(this,props,context);
 };
 content_a1_voca_Adjectives1.__name__ = true;
-content_a1_voca_Adjectives1.__super__ = React_Component;
-content_a1_voca_Adjectives1.prototype = $extend(React_Component.prototype,{
-	render: function() {
-		var tmp = React.createElement(component_Title,{ text : "Food"});
-		var tmp1 = React.createElement("br",{ });
-		var tmp2 = React.createElement("br",{ });
-		var tmp3 = React.createElement("br",{ });
-		var tmp4 = React.createElement("br",{ });
-		var tmp5 = React.createElement("br",{ });
-		var tmp6 = React.createElement("br",{ });
-		var tmp7 = React.createElement("br",{ });
-		var tmp8 = React.createElement("br",{ });
-		var tmp9 = React.createElement("br",{ });
-		var tmp10 = React.createElement("br",{ });
-		var tmp11 = React.createElement("br",{ });
-		var tmp12 = React.createElement("br",{ });
-		var tmp13 = React.createElement("br",{ });
-		var tmp14 = React.createElement("br",{ });
-		var tmp15 = React.createElement("br",{ });
-		var tmp16 = React.createElement("br",{ });
-		var tmp17 = React.createElement("br",{ });
-		var tmp18 = React.createElement("br",{ });
-		var tmp19 = React.createElement("br",{ });
-		var tmp20 = React.createElement("br",{ });
-		var tmp21 = React.createElement("br",{ });
-		var tmp22 = React.createElement("br",{ });
-		var tmp23 = React.createElement("br",{ });
-		var tmp24 = React.createElement("br",{ });
-		var tmp25 = React.createElement("br",{ });
-		var tmp26 = React.createElement("br",{ });
-		var tmp27 = React.createElement("br",{ });
-		var tmp28 = React.createElement("br",{ });
-		var tmp29 = React.createElement("br",{ });
-		var tmp30 = React.createElement("br",{ });
-		var tmp31 = React.createElement("br",{ });
-		var tmp32 = React.createElement("br",{ });
-		var tmp33 = React.createElement("br",{ });
-		var tmp34 = React.createElement("br",{ });
-		var tmp35 = React.createElement("br",{ });
-		var tmp36 = React.createElement("br",{ });
-		var tmp37 = React.createElement("br",{ });
-		var tmp38 = React.createElement("br",{ });
-		var tmp39 = React.createElement("br",{ });
-		var tmp40 = React.createElement("br",{ });
-		var tmp41 = React.createElement("br",{ });
-		var tmp42 = React.createElement("br",{ });
-		var tmp43 = React.createElement("br",{ });
-		var tmp44 = React.createElement("br",{ });
-		var tmp45 = React.createElement("br",{ });
-		var tmp46 = React.createElement("br",{ });
-		var tmp47 = React.createElement("br",{ });
-		var tmp48 = React.createElement("br",{ });
-		var tmp49 = React.createElement("br",{ });
-		var tmp50 = React.createElement("br",{ });
-		var tmp51 = React.createElement("br",{ });
-		var tmp52 = React.createElement("br",{ });
-		var tmp53 = React.createElement("br",{ });
-		var tmp54 = React.createElement("br",{ });
-		var tmp55 = React.createElement("div",{ className : "two_columns"},"petit\tsmall, short ",tmp1,"grand\tlarge, tall ",tmp2,"jeune\tyoung ",tmp3,"vieux\told (masculine) ",tmp4,"vieille\told (feminine) ",tmp5,"beau\thandsome; beautiful (with masculine noun) ",tmp6,"belle\tbeautiful (with feminine person or noun) ",tmp7,"fort\tstrong ",tmp8,"faible\tweak (person, object) ",tmp9,"froid\tcold ",tmp10,"chaud\thot ",tmp11,"bien chaud\twarm ",tmp12,"long\tlong ",tmp13,"court\tshort ",tmp14,"clair\tclear, bright (light); thin (soup etc) ",tmp15,"bas\tlow ",tmp16,"haut\thigh, tall ",tmp17,"propre\tclean ",tmp18,"sale\tdirty ",tmp19,"plein\tfull ",tmp20,"sec\tdry ",tmp21,"bon\tgood; right ",tmp22,"faux\twrong, untrue, false ",tmp23,"mauvais\tbad; wrong ",tmp24,"nouveau\tnew ",tmp25,"proche\tnear ",tmp26,"facile\teasy ",tmp27,"difficile\tdifficult ",tmp28,"pauvre\tpoor ",tmp29,"riche\trich ",tmp30,"cher\tdear, beloved; expensive ",tmp31,"heureux\thappy ",tmp32,"content\thappy, satisfied ",tmp33,"fatigué\ttired ",tmp34,"triste\tsad, unhappy ",tmp35,"sain\thealthy ",tmp36,"malade\till ",tmp37,"gentil\tkind, nice ",tmp38,"sympathique\tnice, friendly ",tmp39,"autre\tdistinct, different; supplementary; other ",tmp40,"dernier\tlast, final; previous ",tmp41,"doux\tsoft, smooth ",tmp42,"drôle\tcomical, funny, amusing ",tmp43,"étrange\tstrange, odd ",tmp44,"gentil\tkind, nice, sweet ",tmp45,"grand\ttall, big, large, long ",tmp46,"important\timportant ",tmp47,"intéressant\tinteresting ",tmp48,"joli\tpretty, lovely, nice ",tmp49,"même\tsame ",tmp50,"seul\talone, lonely, lonesome ",tmp51,"timide\tshy ",tmp52,"tout\tall (the), the whole ",tmp53,"tranquille\tquiet, peaceful ",tmp54,"vrai\ttrue; genuine, real");
-		return React.createElement("div",{ className : "content_page"},tmp,tmp55);
+content_a1_voca_Adjectives1.__super__ = component_vocabulary_VocabularyPage;
+content_a1_voca_Adjectives1.prototype = $extend(component_vocabulary_VocabularyPage.prototype,{
+	componentWillMount: function() {
+		component_vocabulary_VocabularyPage.prototype.componentWillMount.call(this);
+		this.title = "Adjectives";
+		var _this = data_Dictionary.map;
+		this.words = __map_reserved["adjectives1"] != null ? _this.getReserved("adjectives1") : _this.h["adjectives1"];
+	}
+});
+var content_a1_voca_Apartment = function(props,context) {
+	component_vocabulary_VocabularyPage.call(this,props,context);
+};
+content_a1_voca_Apartment.__name__ = true;
+content_a1_voca_Apartment.__super__ = component_vocabulary_VocabularyPage;
+content_a1_voca_Apartment.prototype = $extend(component_vocabulary_VocabularyPage.prototype,{
+	componentWillMount: function() {
+		component_vocabulary_VocabularyPage.prototype.componentWillMount.call(this);
+		this.words = [{ "word" : "maison 4 pièces", "trn" : "4-room house"},{ "word" : "année de la construction", "trn" : "year of construction"},{ "word" : "appartement meublé", "trn" : "apartment with furniture"},{ "word" : "appartement à louer", "trn" : "apartment for rent"},{ "word" : "appartement à vendre", "trn" : "apartment for sale"},{ "word" : "ascenseur (asc)", "trn" : "lift"},{ "word" : "assurance habitation", "trn" : "home insurance"},{ "word" : "balcon (blc)", "trn" : "balcony"},{ "word" : "buanderie", "trn" : "utility room/laundry room"},{ "word" : "calme", "trn" : "quiet"},{ "word" : "caution", "trn" : "damage deposit (rental property)"},{ "word" : "cave", "trn" : "cellar"},{ "word" : "+ charges", "trn" : "rental price excludes building charges / outgoings"},{ "word" : "chambre (ch, chbr)", "trn" : "bedroom"},{ "word" : "charges comprises (cc)", "trn" : "including building charges / outgoings"},{ "word" : "charges locatives", "trn" : "service and maintenance fees for collective amenities"},{ "word" : "chauffage collectif", "trn" : "(shared) heating included in building charges"},{ "word" : "chauffage au gaz", "trn" : "gas heating"},{ "word" : "chauffage au mazout", "trn" : "oil heating"},{ "word" : "cuisine (cuis)", "trn" : "kitchen"},{ "word" : "cuisine équipée", "trn" : "equipped kitchen"},{ "word" : "dépot de garantie", "trn" : "rental deposit"},{ "word" : "dossier de candidature", "trn" : "rental application form"},{ "word" : "douche (dche)", "trn" : "shower"},{ "word" : "en bon état", "trn" : "in good condition/repair"},{ "word" : "étage (et.)", "trn" : "floor (level of a building)"},{ "word" : "garage (gge)/box", "trn" : "garage"},{ "word" : "honoraires d'agence", "trn" : "agency fees"},{ "word" : "immeuble (imm)", "trn" : "building or residence"},{ "word" : "immobilier", "trn" : "real estate"},{ "word" : "jardin (jard.)", "trn" : "garden"},{ "word" : "loyer", "trn" : "rent"},{ "word" : "maison meublé à louer", "trn" : "furnished house to rent"},{ "word" : "meublé/équipé", "trn" : "furnished"},{ "word" : "neuf", "trn" : "all-new construction"},{ "word" : "pièce (p)", "trn" : "room"},{ "word" : "porte (pte )", "trn" : "door"},{ "word" : "quartier (quart)", "trn" : "district/neighbourhood"},{ "word" : "résidence (rés)", "trn" : "building"},{ "word" : "rez de chaussée (RDC/rdc)", "trn" : "ground floor"},{ "word" : "salle de bain (sdb)", "trn" : "bathroom"},{ "word" : "salle de douche", "trn" : "shower"},{ "word" : "salle à manger (sàm)", "trn" : "dining room"},{ "word" : "salle de séjour (séj ss)", "trn" : "living room"},{ "word" : "séjour (séj)", "trn" : "lounge/sitting room"},{ "word" : "séparé (sép.)", "trn" : "separated"},{ "word" : "sous-sol (s.sol, s/s)", "trn" : "basement"},{ "word" : "sous terrain (s/terrain)", "trn" : "below ground level"},{ "word" : "surface habitable (SH)", "trn" : "total living space"},{ "word" : "terrasse", "trn" : "terrace, paved exterior area, large balcony"},{ "word" : "très bon état (TBE)", "trn" : "in good repair"},{ "word" : "WC séparées", "trn" : "separate toilet"}];
+	}
+	,render: function() {
+		var tmp = this.renderWordElements();
+		var tmp1 = React.createElement("ul",{ className : "word_list"},tmp);
+		var tmp2 = React.createElement("div",{ className : "two_columns"},tmp1);
+		var tmp3 = React.createElement(component_vocabulary_Hint,{ hintX : this.state.hintX, hintY : this.state.hintY, hintShown : this.state.hintShown, hintText : this.state.hintText});
+		return React.createElement("div",{ className : "content_page"},tmp2,tmp3);
 	}
 });
 var content_a1_voca_CafeBar = function(props,context) {
-	React_Component.call(this,props,context);
+	component_vocabulary_VocabularyPage.call(this,props,context);
 };
 content_a1_voca_CafeBar.__name__ = true;
-content_a1_voca_CafeBar.__super__ = React_Component;
-content_a1_voca_CafeBar.prototype = $extend(React_Component.prototype,{
-	render: function() {
-		return React.createElement("div",{ className : "content_page"},"commander - to order","choisir - to choose","écouter - to listen","prendre - to take (to have)","terminer - to finish","végétarien / végétarienne","végétalien / végétalienne","le serveur / la serveuse","le / la chef","la carte","désirer","rien","faire une réservation","la carte","le menu","où sont les toilettes ?","Au sous - sol.","Vous descendez l'escalier.","l'addition / la facture","Je n'en peux plus","J'ai bien / trop mangé ","Un verre de ");
+content_a1_voca_CafeBar.__super__ = component_vocabulary_VocabularyPage;
+content_a1_voca_CafeBar.prototype = $extend(component_vocabulary_VocabularyPage.prototype,{
+	componentWillMount: function() {
+		component_vocabulary_VocabularyPage.prototype.componentWillMount.call(this);
+		this.words = [{ "word" : "trouver", "trn" : "to find"},{ "word" : "commander", "trn" : "to order"},{ "word" : "choisir", "trn" : "to choose"},{ "word" : "écouter", "trn" : "to listen"},{ "word" : "prendre", "trn" : "to take (to have)"},{ "word" : "terminer", "trn" : "to finish"},{ "word" : "végétarien / végétarienne", "trn" : "vegetarian"},{ "word" : "le serveur / la serveuse", "trn" : "waiter"},{ "word" : "le / la chef", "trn" : "chef"},{ "word" : "la carte", "trn" : "menu"},{ "word" : "désirer", "trn" : "to wish, to want"},{ "word" : "rien", "trn" : "nothing"},{ "word" : "faire une réservation", "trn" : "make a reservation"},{ "word" : "le menu", "trn" : "special offer for fixed price"},{ "word" : "les toilettes", "trn" : "toilets"},{ "word" : "sous-sol", "trn" : "underground level"},{ "word" : "l'escalier.", "trn" : "stairs"},{ "word" : "l'addition / la facture", "trn" : "bill, check"},{ "word" : "Je n'en peux plus", "trn" : ""},{ "word" : "J'ai bien mangé", "trn" : ""},{ "word" : "Un verre de", "trn" : "a glass of"},{ "word" : "Une tasse de", "trn" : "a cup of"}];
 	}
 });
 var content_a1_voca_CityNav = function(props,context) {
-	React_Component.call(this,props,context);
+	component_vocabulary_VocabularyPage.call(this,props,context);
 };
 content_a1_voca_CityNav.__name__ = true;
-content_a1_voca_CityNav.__super__ = React_Component;
-content_a1_voca_CityNav.prototype = $extend(React_Component.prototype,{
-	render: function() {
-		var tmp = React.createElement(component_Title,{ text : "Food"});
-		var tmp1 = React.createElement("div",{ className : "two_columns"},"trouver  - to find","traverser - to cross","tourner - to turn","aller - to go ","Prendre - to take","Suivre - follow","Garer - to park","montrer - to show","à gauche - to the left","à droite - to the right","tout droit - straight ahead","Au bout de - at the end of","Au début de - at the beginning of","devant - in front of","derriere - behind","En face de = opposite to ","A coté de - next to","au nord","au sud","a l'est","a l'ouest","en bas - down","en haut - up","jusqu’au - up to","là-bas - over there","La prochaine rue à gauche - next street to the left","piétone - pedestrian","rond-point - traffic circle","La rue - the street","La chemin - road, way","Le coin - the corner","l'eglise - the church","la gare - railway station","L'hôpital - hospital","Le parc","La mairie, hotel de ville ","Les toilettes publiques\t","Le centre ville","Le bar","Le cafe","le pont","le cinéma ","L'université","le métro","Le Musée","Le marché","le supermarché","la banque - bank","boulangerie - bakery","Par autobus","par voture","Par train","À pied","Ce n'est pas loin - It's not far.","c'est près - it's nearby","C'est près d'ici - it's close by");
-		return React.createElement("div",{ className : "content_page"},tmp,tmp1);
+content_a1_voca_CityNav.__super__ = component_vocabulary_VocabularyPage;
+content_a1_voca_CityNav.prototype = $extend(component_vocabulary_VocabularyPage.prototype,{
+	componentWillMount: function() {
+		component_vocabulary_VocabularyPage.prototype.componentWillMount.call(this);
+		this.words = [{ "word" : "trouver", "trn" : "to find"},{ "word" : "traverser", "trn" : "to cross"},{ "word" : "tourner", "trn" : "to turn"},{ "word" : "aller", "trn" : "to go"},{ "word" : "Prendre", "trn" : "to take"},{ "word" : "Suivre", "trn" : "follow"},{ "word" : "Garer", "trn" : "to park"},{ "word" : "montrer", "trn" : "to show"},{ "word" : "à gauche", "trn" : "to the left"},{ "word" : "à droite", "trn" : "to the right"},{ "word" : "tout droit", "trn" : "straight ahead"},{ "word" : "Au bout de", "trn" : "at the end of"},{ "word" : "Au début de", "trn" : "at the beginning of"},{ "word" : "devant", "trn" : "in front of"},{ "word" : "derriere", "trn" : "behind"},{ "word" : "En face de", "trn" : "opposite to"},{ "word" : "A coté de", "trn" : "next to"},{ "word" : "au nord", "trn" : "to the north"},{ "word" : "au sud", "trn" : "to the south"},{ "word" : "a l'est", "trn" : "to the west"},{ "word" : "a l'ouest", "trn" : "to the east"},{ "word" : "en bas", "trn" : "down"},{ "word" : "en haut", "trn" : "up"},{ "word" : "jusqu’au", "trn" : "up to"},{ "word" : "là-bas", "trn" : "over there"},{ "word" : "La prochaine rue à gauche", "trn" : "next street to the left"},{ "word" : "piétone", "trn" : "pedestrian"},{ "word" : "rond-point", "trn" : "traffic circle"},{ "word" : "La rue", "trn" : "the street"},{ "word" : "La chemin", "trn" : "road, way"},{ "word" : "Le coin", "trn" : "the corner"},{ "word" : "l'eglise", "trn" : "the church"},{ "word" : "la gare", "trn" : "railway station"},{ "word" : "L'hôpital", "trn" : "hospital"},{ "word" : "Le parc", "trn" : "park"},{ "word" : "La mairie, hotel de ville", "trn" : "city hall"},{ "word" : "Les toilettes publiques", "trn" : "publi toilet"},{ "word" : "Le centre ville", "trn" : "city center"},{ "word" : "Le bar", "trn" : "bar"},{ "word" : "Le cafe", "trn" : "cafe"},{ "word" : "le pont", "trn" : "bridge"},{ "word" : "le cinéma", "trn" : "movie theater"},{ "word" : "L'université", "trn" : "unversity"},{ "word" : "le métro", "trn" : "subway"},{ "word" : "Le Musée", "trn" : "museum"},{ "word" : "Le marché", "trn" : "market"},{ "word" : "le supermarché", "trn" : ""},{ "word" : "la banque", "trn" : "bank"},{ "word" : "boulangerie", "trn" : "bakery"},{ "word" : "par autobus", "trn" : "by bus"},{ "word" : "par voiture", "trn" : "by car"},{ "word" : "par train", "trn" : "by train"},{ "word" : "À pied", "trn" : "by feet"},{ "word" : "Ce n'est pas loin", "trn" : "It's not far."},{ "word" : "c'est près", "trn" : "it's nearby"},{ "word" : "C'est près d'ici", "trn" : "it's close by"}];
 	}
 });
 var content_a1_voca_Clothes = function(props,context) {
-	React_Component.call(this,props,context);
+	component_vocabulary_VocabularyPage.call(this,props,context);
 };
 content_a1_voca_Clothes.__name__ = true;
-content_a1_voca_Clothes.__super__ = React_Component;
-content_a1_voca_Clothes.prototype = $extend(React_Component.prototype,{
-	render: function() {
-		var tmp = React.createElement(component_Title,{ text : "Les vetements - Clothes"});
-		var tmp1 = React.createElement("br",{ });
-		var tmp2 = React.createElement("br",{ });
-		var tmp3 = React.createElement("br",{ });
-		var tmp4 = React.createElement("br",{ });
-		var tmp5 = React.createElement("br",{ });
-		var tmp6 = React.createElement("br",{ });
-		var tmp7 = React.createElement("br",{ });
-		var tmp8 = React.createElement("br",{ });
-		var tmp9 = React.createElement("br",{ });
-		var tmp10 = React.createElement("br",{ });
-		var tmp11 = React.createElement("br",{ });
-		var tmp12 = React.createElement("br",{ });
-		var tmp13 = React.createElement("br",{ });
-		var tmp14 = React.createElement("br",{ });
-		var tmp15 = React.createElement("br",{ });
-		var tmp16 = React.createElement("br",{ });
-		var tmp17 = React.createElement("br",{ });
-		var tmp18 = React.createElement("br",{ });
-		var tmp19 = React.createElement("br",{ });
-		var tmp20 = React.createElement("br",{ });
-		var tmp21 = React.createElement("br",{ });
-		var tmp22 = React.createElement("br",{ });
-		var tmp23 = React.createElement("br",{ });
-		var tmp24 = React.createElement("br",{ });
-		var tmp25 = React.createElement("div",{ className : "two_columns"},"choisir - to choose","porter - to wear","essayer - to try","taille - size","Un manteau : coat ",tmp1,"Une veste : jacket ",tmp2,"Un pull : a sweater ",tmp3,"Une chemise : a shirt ",tmp4,"Une chemise à manches courtes ",tmp5,"Une chemise à manches longues ",tmp6,"Une blouse : a lady’s shirt ",tmp7,"Un T - shirt ",tmp8,"Un pantalon : pants ",tmp9,"Un jean : jeans ",tmp10,"Un short : shorts ",tmp11,"Une robe ",tmp12,"Une robe du soir ",tmp13,"Une jupe ",tmp14,"Une mini-jupe ",tmp15,"la cravate tie ",tmp16,"la ceinture belt ",tmp17,"les chaussettes (f) socks ",tmp18,"les bottes (f) boots ",tmp19,"les tennis (m) sneakers / trainer ",tmp20,"chapeau hat ",tmp21,"gants gloves ",tmp22,"culotte panties ",tmp23,"le slip man pants ",tmp24,"le caleçon underwear");
-		return React.createElement("div",{ className : "content_page"},tmp,tmp25);
+content_a1_voca_Clothes.__super__ = component_vocabulary_VocabularyPage;
+content_a1_voca_Clothes.prototype = $extend(component_vocabulary_VocabularyPage.prototype,{
+	componentWillMount: function() {
+		component_vocabulary_VocabularyPage.prototype.componentWillMount.call(this);
+		this.title = "Les vetements - Clothes";
+		var _this = data_Dictionary.map;
+		this.words = __map_reserved["clothes"] != null ? _this.getReserved("clothes") : _this.h["clothes"];
 	}
 });
 var content_a1_voca_Colors = function(props,context) {
-	React_Component.call(this,props,context);
+	component_vocabulary_VocabularyPage.call(this,props,context);
 };
 content_a1_voca_Colors.__name__ = true;
-content_a1_voca_Colors.__super__ = React_Component;
-content_a1_voca_Colors.prototype = $extend(React_Component.prototype,{
-	render: function() {
-		var tmp = React.createElement(component_Title,{ text : "Les couleurs - Colors"});
-		var tmp1 = React.createElement("br",{ });
-		var tmp2 = React.createElement("br",{ });
-		var tmp3 = React.createElement("br",{ });
-		var tmp4 = React.createElement("br",{ });
-		var tmp5 = React.createElement("br",{ });
-		var tmp6 = React.createElement("br",{ });
-		var tmp7 = React.createElement("br",{ });
-		var tmp8 = React.createElement("br",{ });
-		var tmp9 = React.createElement("br",{ });
-		var tmp10 = React.createElement("br",{ });
-		var tmp11 = React.createElement("br",{ });
-		var tmp12 = React.createElement("br",{ });
-		return React.createElement("div",{ className : "content_page"},tmp,"brown - marron ",tmp1,"red - rouge ",tmp2,"orange - orange ",tmp3,"yellow - jaune ",tmp4,"green - vert ",tmp5,"blue - bleu ",tmp6,"purple - violet ",tmp7,"pink - rose ",tmp8,"white - blanc/blanche ",tmp9,"grey - gris ",tmp10,"black - noir ",tmp11,"light blue - bleu clair ",tmp12,"dark blue - bleu foncé");
+content_a1_voca_Colors.__super__ = component_vocabulary_VocabularyPage;
+content_a1_voca_Colors.prototype = $extend(component_vocabulary_VocabularyPage.prototype,{
+	componentWillMount: function() {
+		component_vocabulary_VocabularyPage.prototype.componentWillMount.call(this);
+		this.title = "Les couleurs - Colors";
+		this.words = [{ "word" : "trouver", "trn" : "to find"},{ "word" : "marron", "trn" : "brown"},{ "word" : "rouge", "trn" : "red"},{ "word" : "orange", "trn" : "orange"},{ "word" : "jaune", "trn" : "yellow"},{ "word" : "vert", "trn" : "green"},{ "word" : "bleu", "trn" : "blue"},{ "word" : "violet", "trn" : "purple"},{ "word" : "rose", "trn" : "pink"},{ "word" : "blanc/blanche", "trn" : "white"},{ "word" : "gris", "trn" : "grey"},{ "word" : "noir", "trn" : "black"},{ "word" : "bleu clair", "trn" : "light blue"},{ "word" : "bleu foncé", "trn" : "dark blue"}];
 	}
 });
 var content_a1_voca_Compliments = function(props,context) {
-	React_Component.call(this,props,context);
+	component_vocabulary_VocabularyPage.call(this,props,context);
 };
 content_a1_voca_Compliments.__name__ = true;
-content_a1_voca_Compliments.__super__ = React_Component;
-content_a1_voca_Compliments.prototype = $extend(React_Component.prototype,{
-	render: function() {
-		return React.createElement("div",{ className : "content_page"},"Les compléments","Tu es très jolie.","Je t'aime.","Je t'adore.","Ma belle","mon cœur","Je pense à toi.","Que tu es belle !","Le grand amour","Vous etes vraiment belle","Je vous trouve magnifique ","Je suis etourdi par votre beaute","Je suis étourdi par ta beauté","Votre sourire est un don","Mon coeur ne bat que pour toi","Je t'aime de tout mon coeur, tout mon ame, tout mon etre","Tu es la femme la plus belle au monde, il n'y a pas de mots pour le dire","Je pourrais rester heureux toute ma vie, tant que vous êtes à mes côtés","Tu es drôle.","Tu es mignonne.","Tu es la fille de mes rêves.","Tu es l'amour de ma vie.","Est - ce que tu es aussi doux que tes yeux?","ma petite chatte","ma petite chaton");
+content_a1_voca_Compliments.__super__ = component_vocabulary_VocabularyPage;
+content_a1_voca_Compliments.prototype = $extend(component_vocabulary_VocabularyPage.prototype,{
+	componentWillMount: function() {
+		component_vocabulary_VocabularyPage.prototype.componentWillMount.call(this);
+		this.title = "Les compléments";
+		this.words = [{ "word" : "Tu es très jolie.", "trn" : ""},{ "word" : "Je t'aime.", "trn" : ""},{ "word" : "Je t'adore.", "trn" : ""},{ "word" : "Ma belle", "trn" : ""},{ "word" : "mon cœur", "trn" : ""},{ "word" : "Je pense à toi.", "trn" : ""},{ "word" : "Que tu es belle !", "trn" : ""},{ "word" : "Le grand amour", "trn" : ""},{ "word" : "Vous etes vraiment belle", "trn" : ""},{ "word" : "Je vous trouve magnifique", "trn" : ""},{ "word" : "Je suis etourdi par votre beaute", "trn" : ""},{ "word" : "Je suis étourdi par ta beauté", "trn" : ""},{ "word" : "Votre sourire est un don", "trn" : ""},{ "word" : "Mon coeur ne bat que pour toi", "trn" : ""},{ "word" : "Je t'aime de tout mon coeur, tout mon ame, tout mon etre", "trn" : ""},{ "word" : "Tu es la femme la plus belle au monde, il n'y a pas de mots pour le dire", "trn" : ""},{ "word" : "Je pourrais rester heureux toute ma vie, tant que vous êtes à mes côtés", "trn" : ""},{ "word" : "Tu es drôle.", "trn" : ""},{ "word" : "Tu es mignonne.", "trn" : ""},{ "word" : "Tu es la fille de mes rêves.", "trn" : ""},{ "word" : "Tu es l'amour de ma vie.", "trn" : ""},{ "word" : "Est - ce que tu es aussi doux que tes yeux?", "trn" : ""},{ "word" : "ma petite chatte", "trn" : ""},{ "word" : "ma petite chaton", "trn" : ""}];
+	}
+	,render: function() {
+		var tmp = React.createElement(component_Title,{ text : this.title});
+		var tmp1 = this.renderWordElements();
+		var tmp2 = React.createElement("ul",{ className : "word_list"},tmp1);
+		return React.createElement("div",{ className : "content_page"},tmp,tmp2);
 	}
 });
 var content_a1_voca_Countries = function(props,context) {
-	React_Component.call(this,props,context);
+	component_vocabulary_VocabularyPage.call(this,props,context);
 };
 content_a1_voca_Countries.__name__ = true;
-content_a1_voca_Countries.__super__ = React_Component;
-content_a1_voca_Countries.prototype = $extend(React_Component.prototype,{
-	render: function() {
-		var tmp = React.createElement(component_Title,{ text : "Countries and nationalities"});
-		var tmp1 = React.createElement("br",{ });
-		var tmp2 = React.createElement("br",{ });
-		var tmp3 = React.createElement("br",{ });
-		var tmp4 = React.createElement("br",{ });
-		var tmp5 = React.createElement("br",{ });
-		var tmp6 = React.createElement("br",{ });
-		var tmp7 = React.createElement("br",{ });
-		var tmp8 = React.createElement("br",{ });
-		var tmp9 = React.createElement("br",{ });
-		var tmp10 = React.createElement("br",{ });
-		var tmp11 = React.createElement("br",{ });
-		var tmp12 = React.createElement("br",{ });
-		var tmp13 = React.createElement("br",{ });
-		var tmp14 = React.createElement("br",{ });
-		var tmp15 = React.createElement("br",{ });
-		var tmp16 = React.createElement("br",{ });
-		var tmp17 = React.createElement("br",{ });
-		var tmp18 = React.createElement("br",{ });
-		var tmp19 = React.createElement("br",{ });
-		var tmp20 = React.createElement("br",{ });
-		var tmp21 = React.createElement("br",{ });
-		var tmp22 = React.createElement("br",{ });
-		var tmp23 = React.createElement("br",{ });
-		var tmp24 = React.createElement("br",{ });
-		var tmp25 = React.createElement("br",{ });
-		var tmp26 = React.createElement("br",{ });
-		var tmp27 = React.createElement("br",{ });
-		var tmp28 = React.createElement("br",{ });
-		var tmp29 = React.createElement("br",{ });
-		var tmp30 = React.createElement("p",{ className : "page_example"},"I'm from Russia.",tmp27,"Je viens de Russie.",tmp28,"I am Russian.",tmp29,"Je suis Russe.");
-		return React.createElement("div",{ className : "content_page"},tmp,"Belarus\t- la Biélorussie ",tmp1,"Belgium\t- la Belgique Belge ",tmp2,"Canada - le Canada - Canadien(ne) ",tmp3,"China\t- la Chine - Chinois(e) ",tmp4,"Czech Republic - la République tchèque  ",tmp5,"England\t- l'Angleterre (f) - Anglais(e) ",tmp6,"Estonia\t- l'Estonie (f) ",tmp7,"France - la France  - Français(e) ",tmp8,"Germany\t- l'Allemagne (f) - Allemand(e) ",tmp9,"Hungary\t- la Hongrie  ",tmp10,"India\t- l'Inde (f) - Indien(ne) ",tmp11,"Italy\t- l'Italie (f) - Italien(ne) ",tmp12,"Japan\t- le Japon  - Japonais(e) ",tmp13,"Kazakhstan\t- le Kazakhstan ",tmp14,"Latvia\t- la Lettonie  ",tmp15,"Luxembourg\t- le Luxembourg ",tmp16,"Moldavia\t- la Moldavie ",tmp17,"Netherlands\t- les Pays-Bas  - Néerlandais(e) ",tmp18,"North Korea\t- la Corée du Nord  ",tmp19,"Poland\t- la Pologne  \t- Polonais(e) ",tmp20," ","Portugal - le Portugal - Portugais(e) ",tmp21,"Russia\t- la Russie  - Russe ",tmp22,"Slovakia - la Slovaquie  ",tmp23,"Spain\t- l'Espagne (f) - Espagnol(e) ",tmp24,"Ukraine\t- l'Ukraine (f) ",tmp25,"United Kingdom\t- le Royaume-Uni  ",tmp26,"United States - les États - Unis (m) - Américain(e)",tmp30);
+content_a1_voca_Countries.__super__ = component_vocabulary_VocabularyPage;
+content_a1_voca_Countries.prototype = $extend(component_vocabulary_VocabularyPage.prototype,{
+	componentWillMount: function() {
+		component_vocabulary_VocabularyPage.prototype.componentWillMount.call(this);
+		this.title = "Countries and nationalities";
+		this.words = [{ "trn" : "Belarus", "word" : "la Biélorussie"},{ "trn" : "Belgium", "word" : "la Belgique Belge"},{ "trn" : "Canada", "word" : "le Canada - Canadien(ne)"},{ "trn" : "China", "word" : "la Chine - Chinois(e)"},{ "trn" : "Czech Republic", "word" : "la République Tchèque"},{ "trn" : "England", "word" : "l'Angleterre (f) - Anglais(e)"},{ "trn" : "Estonia", "word" : "l'Estonie (f)"},{ "trn" : "France", "word" : "la France  - Français(e)"},{ "trn" : "Germany", "word" : "l'Allemagne (f) - Allemand(e)"},{ "trn" : "Hungary", "word" : "la Hongrie"},{ "trn" : "India", "word" : "l'Inde (f) - Indien(ne)"},{ "trn" : "Italy", "word" : "l'Italie (f) - Italien(ne)"},{ "trn" : "Japan", "word" : "le Japon  - Japonais(e)"},{ "trn" : "Kazakhstan", "word" : "le Kazakhstan"},{ "trn" : "Latvia", "word" : "la Lettonie"},{ "trn" : "Luxembourg", "word" : "le Luxembourg"},{ "trn" : "Moldavia", "word" : "la Moldavie"},{ "trn" : "Netherlands", "word" : "les Pays-Bas  - Néerlandais(e)"},{ "trn" : "North Korea", "word" : "la Corée du Nord "},{ "trn" : "Poland", "word" : "la Pologne  Polonais(e)"},{ "trn" : "Portugal", "word" : "le Portugal - Portugais(e)"},{ "trn" : "Russia", "word" : "la Russie  - Russe"},{ "trn" : "Slovakia", "word" : "la Slovaquie"},{ "trn" : "Spain", "word" : "l'Espagne (f) - Espagnol(e)"},{ "trn" : "Ukraine", "word" : "l'Ukraine (f)"},{ "trn" : "United Kingdom", "word" : "le Royaume-Uni"},{ "trn" : "United States", "word" : "les États-Unis (m) - Américain(e)"}];
 	}
 });
 var content_a1_voca_DateTime = function(props,context) {
-	React_Component.call(this,props,context);
+	component_vocabulary_VocabularyPage.call(this,props,context);
 };
 content_a1_voca_DateTime.__name__ = true;
-content_a1_voca_DateTime.__super__ = React_Component;
-content_a1_voca_DateTime.prototype = $extend(React_Component.prototype,{
-	render: function() {
-		var tmp = React.createElement(component_Subtitle,{ text : "General vocabulary"});
-		var tmp1 = React.createElement("br",{ });
-		var tmp2 = React.createElement("br",{ });
-		var tmp3 = React.createElement("br",{ });
-		var tmp4 = React.createElement("br",{ });
-		var tmp5 = React.createElement("br",{ });
-		var tmp6 = React.createElement("br",{ });
-		var tmp7 = React.createElement("br",{ });
-		var tmp8 = React.createElement("br",{ });
-		var tmp9 = React.createElement("br",{ });
-		var tmp10 = React.createElement("br",{ });
-		var tmp11 = React.createElement("br",{ });
-		var tmp12 = React.createElement("br",{ });
-		var tmp13 = React.createElement("br",{ });
-		var tmp14 = React.createElement("br",{ });
-		var tmp15 = React.createElement("br",{ });
-		var tmp16 = React.createElement("br",{ });
-		var tmp17 = React.createElement("br",{ });
-		var tmp18 = React.createElement("br",{ });
-		var tmp19 = React.createElement("div",{ className : "two_columns"},"une seconde ",tmp1,"une minute ",tmp2,"une heure ",tmp3,"un jour / la journée - day ",tmp4,"un matin - morning ",tmp5,"midi ",tmp6,"un soir / la soirée- evening ",tmp7,"une nuit - night ",tmp8,"minuit ",tmp9,"une semaine - week ",tmp10,"un mois - month ",tmp11,"l'an / l'année - year ",tmp12,"le ciecle - century  ",tmp13,"l'hiver - winter ",tmp14,"le printemps - spring ",tmp15,"l'été - summer ",tmp16,"l'autumne - autumn ",tmp17,"les jours de travail ",tmp18,"le weekend");
-		var tmp20 = React.createElement(component_Subtitle,{ text : "Months"});
-		var tmp21 = React.createElement("br",{ });
-		var tmp22 = React.createElement("br",{ });
-		var tmp23 = React.createElement("br",{ });
-		var tmp24 = React.createElement("br",{ });
-		var tmp25 = React.createElement("br",{ });
-		var tmp26 = React.createElement("br",{ });
-		var tmp27 = React.createElement("br",{ });
-		var tmp28 = React.createElement("br",{ });
-		var tmp29 = React.createElement("br",{ });
-		var tmp30 = React.createElement("br",{ });
-		var tmp31 = React.createElement("br",{ });
-		var tmp32 = React.createElement("div",{ className : "two_columns"},"janvier ",tmp21,"fevrier ",tmp22,"mars ",tmp23,"avril ",tmp24,"mai ",tmp25,"join ",tmp26,"juillet ",tmp27,"août ",tmp28,"septembre ",tmp29,"octobre ",tmp30,"novembre ",tmp31,"decembre");
-		var tmp33 = React.createElement(component_Subtitle,{ text : "Days of the week"});
-		var tmp34 = React.createElement("br",{ });
-		var tmp35 = React.createElement("br",{ });
-		var tmp36 = React.createElement("br",{ });
-		var tmp37 = React.createElement("br",{ });
-		var tmp38 = React.createElement("br",{ });
-		var tmp39 = React.createElement("br",{ });
-		var tmp40 = React.createElement("div",{ className : "two_columns"},"lundi ",tmp34,"mardi ",tmp35,"mercredi ",tmp36,"jeudi ",tmp37,"vendredi ",tmp38,"samedi ",tmp39,"dimanche");
-		return React.createElement("div",{ className : "content_page"},tmp,tmp19,tmp20,tmp32,tmp33,tmp40);
+content_a1_voca_DateTime.__super__ = component_vocabulary_VocabularyPage;
+content_a1_voca_DateTime.prototype = $extend(component_vocabulary_VocabularyPage.prototype,{
+	componentWillMount: function() {
+		component_vocabulary_VocabularyPage.prototype.componentWillMount.call(this);
+		this.title = "Date and time";
+		this.words = [{ "word" : "une seconde", "trn" : ""},{ "word" : "une minute", "trn" : ""},{ "word" : "une heure", "trn" : ""},{ "word" : "un jour / la journée", "trn" : "day"},{ "word" : "un matin", "trn" : "morning"},{ "word" : "midi", "trn" : ""},{ "word" : "un soir / la soirée", "trn" : "evening"},{ "word" : "une nuit", "trn" : "night"},{ "word" : "minuit", "trn" : ""},{ "word" : "une semaine", "trn" : "week"},{ "word" : "un mois", "trn" : "month"},{ "word" : "l'an / l'année", "trn" : "year"},{ "word" : "le ciecle", "trn" : "century "},{ "word" : "l'hiver", "trn" : "winter"},{ "word" : "le printemps", "trn" : "spring"},{ "word" : "l'été", "trn" : "summer"},{ "word" : "l'autumne", "trn" : "autumn"},{ "word" : "les jours de travail", "trn" : ""},{ "word" : "le weekend", "trn" : ""},{ "word" : "janvier", "trn" : ""},{ "word" : "fevrier", "trn" : ""},{ "word" : "mars", "trn" : ""},{ "word" : "avril", "trn" : ""},{ "word" : "mai", "trn" : ""},{ "word" : "join", "trn" : ""},{ "word" : "juillet", "trn" : ""},{ "word" : "août", "trn" : ""},{ "word" : "septembre", "trn" : ""},{ "word" : "octobre", "trn" : ""},{ "word" : "novembre", "trn" : ""},{ "word" : "decembre", "trn" : ""},{ "word" : "lundi", "trn" : ""},{ "word" : "mardi", "trn" : ""},{ "word" : "mercredi", "trn" : ""},{ "word" : "jeudi", "trn" : ""},{ "word" : "vendredi", "trn" : ""},{ "word" : "samedi", "trn" : ""},{ "word" : "dimanche", "trn" : ""}];
 	}
 });
 var content_a1_voca_Food = function(props,context) {
-	React_Component.call(this,props,context);
+	component_vocabulary_VocabularyPage.call(this,props,context);
 };
 content_a1_voca_Food.__name__ = true;
-content_a1_voca_Food.__super__ = React_Component;
-content_a1_voca_Food.prototype = $extend(React_Component.prototype,{
-	render: function() {
-		var tmp = React.createElement(component_Title,{ text : "Food"});
-		var tmp1 = React.createElement("br",{ });
-		var tmp2 = React.createElement("br",{ });
-		var tmp3 = React.createElement("br",{ });
-		var tmp4 = React.createElement("br",{ });
-		var tmp5 = React.createElement("br",{ });
-		var tmp6 = React.createElement("br",{ });
-		var tmp7 = React.createElement("br",{ });
-		var tmp8 = React.createElement("br",{ });
-		var tmp9 = React.createElement("div",{ className : "two_columns"},"manger     to eat ",tmp1,"dîner     to have dinner ",tmp2,"déjeuner     to have breakfast or lunch ",tmp3,"avoir faim     to be hungry ",tmp4,"gouter to taste, to try ",tmp5,"boire to drink ",tmp6,"le petit-déjeuner     breakfast ",tmp7,"le déjeuner     lunch ",tmp8,"le dîner     dinner","végétarien vegetarian");
-		var tmp10 = React.createElement("br",{ });
-		var tmp11 = React.createElement("br",{ });
-		var tmp12 = React.createElement("br",{ });
-		var tmp13 = React.createElement("br",{ });
-		var tmp14 = React.createElement("br",{ });
-		var tmp15 = React.createElement("br",{ });
-		var tmp16 = React.createElement("br",{ });
-		var tmp17 = React.createElement("br",{ });
-		var tmp18 = React.createElement("br",{ });
-		var tmp19 = React.createElement("br",{ });
-		var tmp20 = React.createElement("br",{ });
-		var tmp21 = React.createElement("br",{ });
-		var tmp22 = React.createElement("br",{ });
-		var tmp23 = React.createElement("br",{ });
-		var tmp24 = React.createElement("br",{ });
-		var tmp25 = React.createElement("br",{ });
-		var tmp26 = React.createElement("br",{ });
-		var tmp27 = React.createElement("br",{ });
-		var tmp28 = React.createElement("br",{ });
-		var tmp29 = React.createElement("br",{ });
-		var tmp30 = React.createElement("br",{ });
-		var tmp31 = React.createElement("br",{ });
-		var tmp32 = React.createElement("br",{ });
-		var tmp33 = React.createElement("br",{ });
-		var tmp34 = React.createElement("br",{ });
-		var tmp35 = React.createElement("br",{ });
-		var tmp36 = React.createElement("br",{ });
-		var tmp37 = React.createElement("br",{ });
-		var tmp38 = React.createElement("br",{ });
-		var tmp39 = React.createElement("br",{ });
-		var tmp40 = React.createElement("br",{ });
-		var tmp41 = React.createElement("br",{ });
-		var tmp42 = React.createElement("br",{ });
-		var tmp43 = React.createElement("br",{ });
-		var tmp44 = React.createElement("br",{ });
-		var tmp45 = React.createElement("br",{ });
-		var tmp46 = React.createElement("br",{ });
-		var tmp47 = React.createElement("br",{ });
-		var tmp48 = React.createElement("br",{ });
-		var tmp49 = React.createElement("br",{ });
-		var tmp50 = React.createElement("br",{ });
-		var tmp51 = React.createElement("br",{ });
-		var tmp52 = React.createElement("br",{ });
-		var tmp53 = React.createElement("br",{ });
-		var tmp54 = React.createElement("br",{ });
-		var tmp55 = React.createElement("br",{ });
-		var tmp56 = React.createElement("br",{ });
-		var tmp57 = React.createElement("br",{ });
-		var tmp58 = React.createElement("br",{ });
-		var tmp59 = React.createElement("br",{ });
-		var tmp60 = React.createElement("br",{ });
-		var tmp61 = React.createElement("br",{ });
-		var tmp62 = React.createElement("br",{ });
-		var tmp63 = React.createElement("br",{ });
-		var tmp64 = React.createElement("br",{ });
-		var tmp65 = React.createElement("br",{ });
-		var tmp66 = React.createElement("br",{ });
-		var tmp67 = React.createElement("br",{ });
-		var tmp68 = React.createElement("div",{ className : "two_columns"},"la soupe, le potage     soup ",tmp10,"la salade     salad ",tmp11,"le dessert     dessert ",tmp12,"les frites   fries","l'huile d'olive (f)   olive oil ",tmp13,"un œuf, des œufs   egg, eggs ",tmp14,"le pain   bread ",tmp15,"les pâtes   pasta ",tmp16,"le poivre   pepper ",tmp17,"le riz   rice ",tmp18,"le sel   salt ",tmp19,"le sucre   sugar ",tmp20,"le fruit   fruit ",tmp21,"un abricot   apricot ",tmp22,"un ananas   pineapple ",tmp23,"une banane   banana ",tmp24,"une cerise   cherry ",tmp25,"un citron   lemon ",tmp26,"une fraise   strawberry ",tmp27,"une framboise   raspberry ",tmp28,"une mûre   blackberry ",tmp29,"une myrtille   blueberry ",tmp30,"une orange   orange ",tmp31,"un pamplemousse   grapefruit ",tmp32,"une pastèque   watermelon ",tmp33,"une pêche   peach ",tmp34,"une poire   pear ",tmp35,"une pomme   apple ",tmp36,"une prune   plum ",tmp37,"un raisin   grape ",tmp38,"un légume   vegetable ",tmp39,"une aubergine   eggplant ",tmp40,"la carotte   carrot ",tmp41,"le champignon   mushroom ",tmp42,"le concombre   cucumber ",tmp43,"un haricot   bean ",tmp44,"un oignon   onion ",tmp45,"la pomme de terre   potato ",tmp46,"la tomate   tomato ",tmp47,"la viande   meat ",tmp48,"la dinde   turkey ",tmp49,"le jambon   ham ",tmp50,"le poisson   fish ",tmp51,"le porc   pork ",tmp52,"le poulet   chicken ",tmp53,"le beurre   butter ",tmp54,"le fromage   cheese ",tmp55,"le lait   milk ",tmp56,"le yaourt   yogurt ",tmp57,"le dessert   dessert ",tmp58,"le biscuit   cookie ",tmp59,"le chocolat   chocolate ",tmp60,"le gâteau   cake ",tmp61,"la glace   ice cream ",tmp62,"la pizza ",tmp63,"le sandwich ",tmp64,"du café (tasse du cafe) ",tmp65,"thé (tasse du cafe) ",tmp66,"mulled wine - Vin chaud ",tmp67,"beer Bière");
-		return React.createElement("div",{ className : "content_page"},tmp,tmp9,tmp68);
+content_a1_voca_Food.__super__ = component_vocabulary_VocabularyPage;
+content_a1_voca_Food.prototype = $extend(component_vocabulary_VocabularyPage.prototype,{
+	componentWillMount: function() {
+		component_vocabulary_VocabularyPage.prototype.componentWillMount.call(this);
+		this.title = "Food";
+		var _this = data_Dictionary.map;
+		this.words = __map_reserved["food"] != null ? _this.getReserved("food") : _this.h["food"];
 	}
 });
 var content_a1_voca_Numbers = function(props,context) {
@@ -1496,162 +1523,83 @@ content_a1_voca_Numbers.prototype = $extend(React_Component.prototype,{
 	}
 });
 var content_a1_voca_Professions = function(props,context) {
-	React_Component.call(this,props,context);
+	component_vocabulary_VocabularyPage.call(this,props,context);
 };
 content_a1_voca_Professions.__name__ = true;
-content_a1_voca_Professions.__super__ = React_Component;
-content_a1_voca_Professions.prototype = $extend(React_Component.prototype,{
-	render: function() {
-		var tmp = React.createElement(component_Title,{ text : "Professions"});
-		var tmp1 = React.createElement("br",{ });
-		var tmp2 = React.createElement("br",{ });
-		var tmp3 = React.createElement("br",{ });
-		var tmp4 = React.createElement("br",{ });
-		var tmp5 = React.createElement("br",{ });
-		var tmp6 = React.createElement("br",{ });
-		var tmp7 = React.createElement("br",{ });
-		var tmp8 = React.createElement("br",{ });
-		var tmp9 = React.createElement("br",{ });
-		var tmp10 = React.createElement("br",{ });
-		var tmp11 = React.createElement("br",{ });
-		var tmp12 = React.createElement("br",{ });
-		var tmp13 = React.createElement("br",{ });
-		var tmp14 = React.createElement("br",{ });
-		var tmp15 = React.createElement("br",{ });
-		var tmp16 = React.createElement("br",{ });
-		var tmp17 = React.createElement("br",{ });
-		var tmp18 = React.createElement("br",{ });
-		var tmp19 = React.createElement("br",{ });
-		var tmp20 = React.createElement("br",{ });
-		var tmp21 = React.createElement("br",{ });
-		var tmp22 = React.createElement("br",{ });
-		var tmp23 = React.createElement("br",{ });
-		var tmp24 = React.createElement("br",{ });
-		var tmp25 = React.createElement("br",{ });
-		var tmp26 = React.createElement("br",{ });
-		var tmp27 = React.createElement("br",{ });
-		var tmp28 = React.createElement("br",{ });
-		var tmp29 = React.createElement("br",{ });
-		var tmp30 = React.createElement("br",{ });
-		var tmp31 = React.createElement("br",{ });
-		var tmp32 = React.createElement("div",{ className : "two_columns"},"doctor\tun médecin ",tmp1,"high school or college instructor\tun professeur ",tmp2,"engineer\tingénieur ",tmp3,"lawyer\tun avocat ",tmp4,"nurse\tun infirmier (une infirmière) ",tmp5,"accountant\tun comptable ",tmp6,"cashier\tun cassier ",tmp7,"waiter\tun serveur ",tmp8,"janitor\tun gardien ",tmp9,"secretary\tun secrétariat ",tmp10,"scientist\tun scientifique ",tmp11,"salesperson\tun vendeur (une vendeuse) ",tmp12,"banker\tun banquier ",tmp13,"computer programmer\tun programmeur (une programmeuse) ",tmp14,"editor\tun rédacteur ",tmp15,"writer\tun écrivant ",tmp16,"interior designer\tun architecte d’intérieur ",tmp17,"web designer\tun créateur de sites ",tmp18,"police officer\tun agent de police ",tmp19,"firefighter\tun pompier ",tmp20,"financial analyst\tun analyste financier ",tmp21,"psychologist\tun psychologue ",tmp22,"dancer\tun danseur ",tmp23,"singer\tun chanteur (une chanteuse) ",tmp24,"artist\tun artiste ",tmp25,"schoolteacher\tun maître ",tmp26,"insurance agent\tun représentant d’assurances ",tmp27,"psychotherapist - Psychothérapeute ",tmp28,"le chef ",tmp29,"cuisinier ",tmp30,"chef de cuisine ",tmp31,"to work\t- travailler");
-		return React.createElement("div",{ className : "content_page"},tmp,tmp32);
+content_a1_voca_Professions.__super__ = component_vocabulary_VocabularyPage;
+content_a1_voca_Professions.prototype = $extend(component_vocabulary_VocabularyPage.prototype,{
+	componentWillMount: function() {
+		component_vocabulary_VocabularyPage.prototype.componentWillMount.call(this);
+		this.title = "Professions";
+		this.words = [{ "trn" : "doctor", "word" : "un médecin"},{ "trn" : "high school or college instructor", "word" : "un professeur"},{ "trn" : "engineer", "word" : "ingénieur"},{ "trn" : "lawyer", "word" : "un avocat"},{ "trn" : "nurse", "word" : "un infirmier (une infirmière)"},{ "trn" : "accountant", "word" : "un comptable"},{ "trn" : "cashier", "word" : "un cassier"},{ "trn" : "waiter", "word" : "un serveur"},{ "trn" : "janitor", "word" : "un gardien"},{ "trn" : "secretary", "word" : "un secrétariat"},{ "trn" : "scientist", "word" : "un scientifique"},{ "trn" : "salesperson", "word" : "un vendeur (une vendeuse)"},{ "trn" : "banker", "word" : "un banquier"},{ "trn" : "computer programmer", "word" : "un programmeur (une programmeuse)"},{ "trn" : "editor", "word" : "un rédacteur"},{ "trn" : "writer", "word" : "un écrivant"},{ "trn" : "interior designer", "word" : "un architecte d’intérieur"},{ "trn" : "web designer", "word" : "un créateur de sites"},{ "trn" : "police officer", "word" : "un agent de police"},{ "trn" : "firefighter", "word" : "un pompier"},{ "trn" : "financial analyst", "word" : "un analyste financier"},{ "trn" : "psychologist", "word" : "un psychologue"},{ "trn" : "dancer", "word" : "un danseur"},{ "trn" : "singer", "word" : "un chanteur (une chanteuse)"},{ "trn" : "artist", "word" : "un artiste"},{ "trn" : "schoolteacher", "word" : "un maître"},{ "trn" : "insurance agent", "word" : "un représentant d’assurances"},{ "trn" : "psychotherapist", "word" : "psychothérapeute"},{ "trn" : "to work", "word" : "travailler"}];
 	}
 });
 var content_a1_voca_TrainStation = function(props,context) {
-	React_Component.call(this,props,context);
+	component_vocabulary_VocabularyPage.call(this,props,context);
 };
 content_a1_voca_TrainStation.__name__ = true;
-content_a1_voca_TrainStation.__super__ = React_Component;
-content_a1_voca_TrainStation.prototype = $extend(React_Component.prototype,{
-	render: function() {
-		var tmp = React.createElement(component_Title,{ text : "Train station"});
-		var tmp1 = React.createElement("br",{ });
-		var tmp2 = React.createElement("br",{ });
-		var tmp3 = React.createElement("br",{ });
-		var tmp4 = React.createElement("br",{ });
-		var tmp5 = React.createElement("br",{ });
-		var tmp6 = React.createElement("br",{ });
-		var tmp7 = React.createElement("br",{ });
-		var tmp8 = React.createElement("br",{ });
-		var tmp9 = React.createElement("br",{ });
-		var tmp10 = React.createElement("br",{ });
-		var tmp11 = React.createElement("br",{ });
-		var tmp12 = React.createElement("br",{ });
-		var tmp13 = React.createElement("br",{ });
-		var tmp14 = React.createElement("br",{ });
-		var tmp15 = React.createElement("br",{ });
-		var tmp16 = React.createElement("br",{ });
-		var tmp17 = React.createElement("br",{ });
-		var tmp18 = React.createElement("br",{ });
-		var tmp19 = React.createElement("br",{ });
-		var tmp20 = React.createElement("br",{ });
-		var tmp21 = React.createElement("br",{ });
-		var tmp22 = React.createElement("br",{ });
-		var tmp23 = React.createElement("br",{ });
-		var tmp24 = React.createElement("br",{ });
-		var tmp25 = React.createElement("br",{ });
-		var tmp26 = React.createElement("br",{ });
-		var tmp27 = React.createElement("br",{ });
-		var tmp28 = React.createElement("br",{ });
-		var tmp29 = React.createElement("br",{ });
-		var tmp30 = React.createElement("br",{ });
-		var tmp31 = React.createElement("br",{ });
-		var tmp32 = React.createElement("br",{ });
-		var tmp33 = React.createElement("br",{ });
-		var tmp34 = React.createElement("br",{ });
-		var tmp35 = React.createElement("br",{ });
-		var tmp36 = React.createElement("br",{ });
-		var tmp37 = React.createElement("br",{ });
-		var tmp38 = React.createElement("br",{ });
-		var tmp39 = React.createElement("br",{ });
-		var tmp40 = React.createElement("br",{ });
-		var tmp41 = React.createElement("div",{ className : "two_columns"},"Station – la gare ",tmp1,"Ticket office – le guichet ",tmp2,"Platform – le quai ",tmp3,"Waiting room – la salle d’attente ",tmp4,"Passengers – les voyageurs ",tmp5,"Lift – l’ascenseur ",tmp6,"wait - attendre ",tmp7,"arrive - arriver ",tmp8,"depart - partir ",tmp9,"go - aller ",tmp10,"to travel - voyager ",tmp11,"to stop - arrêter ",tmp12,"To reserve – réserver ",tmp13,"to buy - acheter ",tmp14,"to return ticket - retourner le billet ",tmp15,"bus - le bus ",tmp16,"bus station - la gare de bus ",tmp17,"plane - avion ",tmp18,"airport aéroport ",tmp19,"registration enregistrement ",tmp20,"Connection – une correspondance ",tmp21,"High speed train – le train à grand vitesse (TGV) ",tmp22,"Ticket – un billet ",tmp23,"One-way – un aller ",tmp24,"Return – un aller retour ",tmp25,"First class – la première classe ",tmp26,"Ticket prices – les tarifs / les prix ",tmp27,"Refund – un remboursement ",tmp28,"Validate your ticket – composter votre billet ",tmp29,"Timetable – les horaires ",tmp30,"Arrivals – les arrivés ",tmp31,"Departures – les départs ",tmp32,"Leaving from – en provenance de ",tmp33,"Going to – a destination de ",tmp34,"On time – à l’heure ",tmp35,"Delay – un retard ",tmp36,"Traffic – la circulation ",tmp37,"Engineering works – les travaux ",tmp38,"Seat – une place ",tmp39,"Buffet car – la voiture buffet ",tmp40,"A stop – un arret","mes bagages","ma valise","voiture-restaurant","un aller-retour");
-		return React.createElement("div",{ className : "content_page"},tmp,tmp41);
+content_a1_voca_TrainStation.__super__ = component_vocabulary_VocabularyPage;
+content_a1_voca_TrainStation.prototype = $extend(component_vocabulary_VocabularyPage.prototype,{
+	componentWillMount: function() {
+		component_vocabulary_VocabularyPage.prototype.componentWillMount.call(this);
+		this.title = "Train station";
+		this.words = [{ "trn" : "Station", "word" : "la gare"},{ "trn" : "Ticket office", "word" : "le guichet"},{ "trn" : "Platform", "word" : "le quai"},{ "trn" : "Waiting room", "word" : "la salle d’attente"},{ "trn" : "Passengers", "word" : "les voyageurs"},{ "trn" : "Lift", "word" : "l’ascenseur"},{ "trn" : "wait", "word" : "attendre"},{ "trn" : "arrive", "word" : "arriver"},{ "trn" : "depart", "word" : "partir"},{ "trn" : "go", "word" : "aller"},{ "trn" : "to travel", "word" : "voyager"},{ "trn" : "to stop", "word" : "arrêter"},{ "trn" : "To reserve", "word" : "réserver"},{ "trn" : "to buy", "word" : "acheter"},{ "trn" : "to return ticket", "word" : "retourner le billet"},{ "trn" : "bus", "word" : "le bus"},{ "trn" : "bus station", "word" : "la gare de bus"},{ "trn" : "plane", "word" : "avion"},{ "trn" : "airport", "word" : "aéroport"},{ "trn" : "registration", "word" : "enregistrement"},{ "trn" : "Connection", "word" : "une correspondance"},{ "trn" : "High speed train", "word" : "le train à grand vitesse (TGV)"},{ "trn" : "Ticket", "word" : "un billet"},{ "trn" : "One-way", "word" : "un aller"},{ "trn" : "Return", "word" : "un aller retour"},{ "trn" : "First class", "word" : "la première classe"},{ "trn" : "Ticket prices", "word" : "les tarifs / les prix"},{ "trn" : "Refund", "word" : "un remboursement"},{ "trn" : "Validate your ticket", "word" : "composter votre billet"},{ "trn" : "Timetable", "word" : "les horaires"},{ "trn" : "Arrivals", "word" : "les arrivés"},{ "trn" : "Departures", "word" : "les départs"},{ "trn" : "Leaving from", "word" : "en provenance de"},{ "trn" : "Going to", "word" : "a destination de"},{ "trn" : "On time", "word" : "à l’heure"},{ "trn" : "Delay", "word" : "un retard"},{ "trn" : "Traffic", "word" : "la circulation"},{ "trn" : "Engineering works", "word" : "les travaux"},{ "trn" : "Seat", "word" : "une place"},{ "trn" : "Buffet car", "word" : "la voiture buffet"},{ "trn" : "A stop", "word" : "un arret"},{ "trn" : "", "word" : "mes bagages"},{ "trn" : "", "word" : "ma valise"},{ "trn" : "", "word" : "voiture-restaurant"},{ "trn" : "", "word" : "un aller-retour"}];
 	}
 });
 var content_a1_voca_VerbsOfFirstGroup = function(props,context) {
-	React_Component.call(this,props,context);
+	component_vocabulary_VocabularyPage.call(this,props,context);
 };
 content_a1_voca_VerbsOfFirstGroup.__name__ = true;
-content_a1_voca_VerbsOfFirstGroup.__super__ = React_Component;
-content_a1_voca_VerbsOfFirstGroup.prototype = $extend(React_Component.prototype,{
-	render: function() {
+content_a1_voca_VerbsOfFirstGroup.__super__ = component_vocabulary_VocabularyPage;
+content_a1_voca_VerbsOfFirstGroup.prototype = $extend(component_vocabulary_VocabularyPage.prototype,{
+	componentWillMount: function() {
+		component_vocabulary_VocabularyPage.prototype.componentWillMount.call(this);
+		var _this = data_Dictionary.map;
+		this.words = __map_reserved["verbs1"] != null ? _this.getReserved("verbs1") : _this.h["verbs1"];
+	}
+	,render: function() {
 		var tmp = React.createElement("div",{ },"Verbs of first group usually end with -er in infinite form. First group is the biggest one and the easiest one.");
-		var tmp1 = React.createElement("br",{ });
-		var tmp2 = React.createElement("br",{ });
-		var tmp3 = React.createElement("br",{ });
-		var tmp4 = React.createElement("br",{ });
-		var tmp5 = React.createElement("br",{ });
-		var tmp6 = React.createElement("br",{ });
-		var tmp7 = React.createElement("br",{ });
-		var tmp8 = React.createElement("br",{ });
-		var tmp9 = React.createElement("br",{ });
-		var tmp10 = React.createElement("br",{ });
-		var tmp11 = React.createElement("br",{ });
-		var tmp12 = React.createElement("br",{ });
-		var tmp13 = React.createElement("br",{ });
-		var tmp14 = React.createElement("br",{ });
-		var tmp15 = React.createElement("br",{ });
-		var tmp16 = React.createElement("br",{ });
-		var tmp17 = React.createElement("br",{ });
-		var tmp18 = React.createElement("br",{ });
-		var tmp19 = React.createElement("br",{ });
-		var tmp20 = React.createElement("br",{ });
-		var tmp21 = React.createElement("br",{ });
-		var tmp22 = React.createElement("br",{ });
-		var tmp23 = React.createElement("br",{ });
-		var tmp24 = React.createElement("br",{ });
-		var tmp25 = React.createElement("br",{ });
-		var tmp26 = React.createElement("br",{ });
-		var tmp27 = React.createElement("br",{ });
-		var tmp28 = React.createElement("br",{ });
-		var tmp29 = React.createElement("br",{ });
-		var tmp30 = React.createElement("br",{ });
-		var tmp31 = React.createElement("br",{ });
-		var tmp32 = React.createElement("br",{ });
-		var tmp33 = React.createElement("br",{ });
-		var tmp34 = React.createElement("br",{ });
-		var tmp35 = React.createElement("br",{ });
-		var tmp36 = React.createElement("br",{ });
-		var tmp37 = React.createElement("br",{ });
-		var tmp38 = React.createElement("br",{ });
-		var tmp39 = React.createElement("br",{ });
-		var tmp40 = React.createElement("br",{ });
-		var tmp41 = React.createElement("br",{ });
-		var tmp42 = React.createElement("br",{ });
-		var tmp43 = React.createElement("br",{ });
-		var tmp44 = React.createElement("br",{ });
-		var tmp45 = React.createElement("br",{ });
-		var tmp46 = React.createElement("br",{ });
-		var tmp47 = React.createElement("br",{ });
-		var tmp48 = React.createElement("br",{ });
-		var tmp49 = React.createElement("div",{ className : "two_columns"},"Acheter ",tmp1,"Appeler ",tmp2,"manger ",tmp3,"parlser ",tmp4,"chanter ",tmp5,"donner ",tmp6,"demander ",tmp7,"passer ",tmp8,"porter ",tmp9,"continuer ",tmp10,"penser ",tmp11,"commencer ",tmp12,"compter ",tmp13,"occuper ",tmp14,"arriver ",tmp15,"decider ",tmp16,"laisser ",tmp17,"sembler ",tmp18,"rappeler ",tmp19,"accepter ",tmp20,"presenter ",tmp21,"poser ",tmp22,"jouer ",tmp23,"toucher ",tmp24,"aimer ",tmp25,"trouver ",tmp26,"retrouver ",tmp27,"expliquer ",tmp28,"gagner ",tmp29,"exister ",tmp30,"changer ",tmp31,"travailler ",tmp32,"assurer ",tmp33,"empecher ",tmp34,"rencontrer ",tmp35,"creer ",tmp36,"chercher ",tmp37,"entrer ",tmp38,"proposer ",tmp39,"apporter ",tmp40,"utiliser ",tmp41,"ajouter ",tmp42,"preparer ",tmp43,"tirer ",tmp44,"pousser ",tmp45,"oublier ",tmp46,"etudier ",tmp47,"signer ",tmp48,"payer");
-		var tmp50 = React.createElement("i",{ },"aller");
-		var tmp51 = React.createElement("div",{ },"One of the most notable exceptions is ",tmp50," - to go.");
-		return React.createElement("div",{ className : "content_page"},tmp,tmp49,tmp51);
+		var tmp1 = this.renderWordElements();
+		var tmp2 = React.createElement("ul",{ className : "word_list"},tmp1);
+		var tmp3 = React.createElement("div",{ className : "two_columns"},tmp2);
+		var tmp4 = React.createElement(component_vocabulary_Hint,{ hintX : this.state.hintX, hintY : this.state.hintY, hintShown : this.state.hintShown, hintText : this.state.hintText});
+		var tmp5 = React.createElement("i",{ },"aller");
+		var tmp6 = React.createElement("div",{ },"One of the most notable exceptions is ",tmp5," - to go.");
+		return React.createElement("div",{ className : "content_page"},tmp,tmp3,tmp4,tmp6);
 	}
 });
+var data_Dictionary = function() { };
+data_Dictionary.__name__ = true;
+data_Dictionary.init = function() {
+	var _this = data_Dictionary.map;
+	var value = [{ "word" : "acheter", "trn" : "to buy"},{ "word" : "appeler", "trn" : "to call"},{ "word" : "manger", "trn" : "to eat"},{ "word" : "parler", "trn" : "to speak"},{ "word" : "chanter", "trn" : "to sing"},{ "word" : "donner", "trn" : "to give"},{ "word" : "demander", "trn" : "to ask"},{ "word" : "passer", "trn" : "to pass"},{ "word" : "porter", "trn" : "to bring"},{ "word" : "continuer", "trn" : "to continue"},{ "word" : "penser", "trn" : "to think"},{ "word" : "commencer", "trn" : "to begin"},{ "word" : "compter", "trn" : "to count"},{ "word" : "occuper", "trn" : "to occupy"},{ "word" : "arriver", "trn" : "to arrive, to come"},{ "word" : "decider", "trn" : "to decide"},{ "word" : "laisser", "trn" : "to let"},{ "word" : "sembler", "trn" : "to appeat"},{ "word" : "rappeler", "trn" : "to remember, to remind to recall"},{ "word" : "accepter", "trn" : "to accept"},{ "word" : "presenter", "trn" : "to present, to introduce, to offer"},{ "word" : "poser", "trn" : "to put, to lay"},{ "word" : "jouer", "trn" : "to play"},{ "word" : "toucher", "trn" : "to touch"},{ "word" : "aimer", "trn" : "to love"},{ "word" : "trouver", "trn" : "to find"},{ "word" : "retrouver", "trn" : "to find, to retrieve"},{ "word" : "expliquer", "trn" : "to explain"},{ "word" : "gagner", "trn" : "to win"},{ "word" : "exister", "trn" : "to exist"},{ "word" : "changer", "trn" : "to change"},{ "word" : "travailler", "trn" : "to work"},{ "word" : "assurer", "trn" : "to ensure"},{ "word" : "empecher", "trn" : "to prevent, to stop"},{ "word" : "rencontrer", "trn" : "to meet"},{ "word" : "creer", "trn" : "to create"},{ "word" : "chercher", "trn" : "to search, to look for"},{ "word" : "entrer", "trn" : "to enter"},{ "word" : "proposer", "trn" : "to propose"},{ "word" : "apporter", "trn" : "to bring"},{ "word" : "utiliser", "trn" : "to use"},{ "word" : "ajouter", "trn" : "to add"},{ "word" : "preparer", "trn" : "to prepare"},{ "word" : "tirer", "trn" : "to pull, to take"},{ "word" : "pousser", "trn" : "to push"},{ "word" : "oublier", "trn" : "to forget"},{ "word" : "etudier", "trn" : "to learn, to study"},{ "word" : "signer", "trn" : "to sign"},{ "word" : "payer", "trn" : "to pay"}];
+	if(__map_reserved["verbs1"] != null) {
+		_this.setReserved("verbs1",value);
+	} else {
+		_this.h["verbs1"] = value;
+	}
+	var _this1 = data_Dictionary.map;
+	var value1 = [{ "word" : "choisir", "trn" : "to choose"},{ "word" : "porter", "trn" : "to wear"},{ "word" : "essayer", "trn" : "to try"},{ "word" : "taille", "trn" : "size"},{ "word" : "Un manteau", "trn" : "coat"},{ "word" : "Une veste", "trn" : "jacket"},{ "word" : "Un pull", "trn" : "a sweater"},{ "word" : "Une chemise", "trn" : "a shirt"},{ "word" : "Une chemise à manches courtes", "trn" : ""},{ "word" : "Une chemise à manches longues", "trn" : ""},{ "word" : "Une blouse", "trn" : "a lady’s shirt"},{ "word" : "Un T-shirt", "trn" : ""},{ "word" : "Un pantalon", "trn" : "pants"},{ "word" : "Un jean", "trn" : "jeans"},{ "word" : "Un short", "trn" : "shorts"},{ "word" : "Une robe", "trn" : ""},{ "word" : "Une robe du soir", "trn" : ""},{ "word" : "Une jupe", "trn" : ""},{ "word" : "Une mini-jupe", "trn" : ""},{ "word" : "la cravate tie", "trn" : ""},{ "word" : "la ceinture belt", "trn" : ""},{ "word" : "les chaussettes (f)", "trn" : "socks"},{ "word" : "les bottes (f)", "trn" : "boots"},{ "word" : "les tennis (m)", "trn" : "sneakers / trainer"},{ "word" : "chapeau", "trn" : "hat"},{ "word" : "gants", "trn" : "gloves"},{ "word" : "culotte", "trn" : "panties"},{ "word" : "le slip", "trn" : "man pants"},{ "word" : "le caleçon", "trn" : "underwear"}];
+	if(__map_reserved["clothes"] != null) {
+		_this1.setReserved("clothes",value1);
+	} else {
+		_this1.h["clothes"] = value1;
+	}
+	var _this2 = data_Dictionary.map;
+	var value2 = [{ "word" : "petit", "trn" : "small, short"},{ "word" : "grand", "trn" : "large, tall"},{ "word" : "jeune", "trn" : "young"},{ "word" : "vieux", "trn" : "old (masculine)"},{ "word" : "vieille", "trn" : "old (feminine)"},{ "word" : "beau", "trn" : "handsome; beautiful (with masculine noun)"},{ "word" : "belle", "trn" : "beautiful (with feminine person or noun)"},{ "word" : "fort", "trn" : "strong"},{ "word" : "faible", "trn" : "weak (person, object)"},{ "word" : "froid", "trn" : "cold"},{ "word" : "chaud", "trn" : "hot"},{ "word" : "bien chaud", "trn" : "warm"},{ "word" : "long", "trn" : "long"},{ "word" : "court", "trn" : "short"},{ "word" : "clair", "trn" : "clear, bright (light); thin (soup etc)"},{ "word" : "bas", "trn" : "low"},{ "word" : "haut", "trn" : "high, tall"},{ "word" : "propre", "trn" : "clean"},{ "word" : "sale", "trn" : "dirty"},{ "word" : "plein", "trn" : "full"},{ "word" : "sec", "trn" : "dry"},{ "word" : "bon", "trn" : "good; right"},{ "word" : "faux", "trn" : "wrong, untrue, false"},{ "word" : "mauvais", "trn" : "bad; wrong"},{ "word" : "nouveau", "trn" : "new"},{ "word" : "proche", "trn" : "near"},{ "word" : "facile", "trn" : "easy"},{ "word" : "difficile", "trn" : "difficult"},{ "word" : "pauvre", "trn" : "poor"},{ "word" : "riche", "trn" : "rich"},{ "word" : "cher", "trn" : "dear, beloved; expensive"},{ "word" : "heureux", "trn" : "happy"},{ "word" : "content", "trn" : "happy, satisfied"},{ "word" : "fatigué", "trn" : "tired"},{ "word" : "triste", "trn" : "sad, unhappy"},{ "word" : "sain", "trn" : "healthy"},{ "word" : "malade", "trn" : "ill"},{ "word" : "gentil", "trn" : "kind, nice"},{ "word" : "sympathique", "trn" : "nice, friendly"},{ "word" : "autre", "trn" : "distinct, different; supplementary; other"},{ "word" : "dernier", "trn" : "last, final; previous"},{ "word" : "doux", "trn" : "soft, smooth"},{ "word" : "drôle", "trn" : "comical, funny, amusing"},{ "word" : "étrange", "trn" : "strange, odd"},{ "word" : "gentil", "trn" : "kind, nice, sweet"},{ "word" : "grand", "trn" : "tall, big, large, long"},{ "word" : "important", "trn" : "important"},{ "word" : "intéressant", "trn" : "interesting"},{ "word" : "joli", "trn" : "pretty, lovely, nice"},{ "word" : "même", "trn" : "same"},{ "word" : "seul", "trn" : "alone, lonely, lonesome"},{ "word" : "timide", "trn" : "shy"},{ "word" : "tout", "trn" : "all (the), the whole"},{ "word" : "tranquille", "trn" : "quiet, peaceful"},{ "word" : "vrai", "trn" : "true; genuine, real"}];
+	if(__map_reserved["adjectives1"] != null) {
+		_this2.setReserved("adjectives1",value2);
+	} else {
+		_this2.h["adjectives1"] = value2;
+	}
+	var _this3 = data_Dictionary.map;
+	var value3 = [{ "word" : "manger", "trn" : "to eat"},{ "word" : "dîner", "trn" : "to have dinner"},{ "word" : "déjeuner", "trn" : "to have breakfast or lunch"},{ "word" : "avoir faim", "trn" : "to be hungry"},{ "word" : "gouter to taste", "trn" : "to try"},{ "word" : "boire", "trn" : "to drink"},{ "word" : "le petit-déjeuner", "trn" : "breakfast"},{ "word" : "le déjeuner", "trn" : "lunch"},{ "word" : "le dîner", "trn" : "dinner"},{ "word" : "végétarien", "trn" : "vegetarian"},{ "word" : "la soupe, le potage", "trn" : "soup"},{ "word" : "la salade", "trn" : "salad"},{ "word" : "le dessert", "trn" : "dessert"},{ "word" : "les frites", "trn" : "fries"},{ "word" : "l'huile d'olive (f)", "trn" : "olive oil"},{ "word" : "un œuf, des œufs", "trn" : "egg, eggs"},{ "word" : "le pain", "trn" : "bread"},{ "word" : "les pâtes", "trn" : "pasta"},{ "word" : "le poivre", "trn" : "pepper"},{ "word" : "le riz", "trn" : "rice"},{ "word" : "le sel", "trn" : "salt"},{ "word" : "le sucre", "trn" : "sugar"},{ "word" : "le fruit", "trn" : "fruit"},{ "word" : "un abricot", "trn" : "apricot"},{ "word" : "un ananas", "trn" : "pineapple"},{ "word" : "une banane", "trn" : "banana"},{ "word" : "une cerise", "trn" : "cherry"},{ "word" : "un citron", "trn" : "lemon"},{ "word" : "une fraise", "trn" : "strawberry"},{ "word" : "une framboise", "trn" : "raspberry"},{ "word" : "une mûre", "trn" : "blackberry"},{ "word" : "une myrtille", "trn" : "blueberry"},{ "word" : "une orange", "trn" : "orange"},{ "word" : "un pamplemousse", "trn" : "grapefruit"},{ "word" : "une pastèque", "trn" : "watermelon"},{ "word" : "une pêche", "trn" : "peach"},{ "word" : "une poire", "trn" : "pear"},{ "word" : "une pomme", "trn" : "apple"},{ "word" : "une prune", "trn" : "plum"},{ "word" : "un raisin", "trn" : "grape"},{ "word" : "un légume", "trn" : "vegetable"},{ "word" : "une aubergine", "trn" : "eggplant"},{ "word" : "la carotte", "trn" : "carrot"},{ "word" : "le champignon", "trn" : "mushroom"},{ "word" : "le concombre", "trn" : "cucumber"},{ "word" : "un haricot", "trn" : "bean"},{ "word" : "un oignon", "trn" : "onion"},{ "word" : "la pomme de terre", "trn" : "potato"},{ "word" : "la tomate", "trn" : "tomato"},{ "word" : "la viande", "trn" : "meat"},{ "word" : "la dinde", "trn" : "turkey"},{ "word" : "le jambon", "trn" : "ham"},{ "word" : "le poisson", "trn" : "fish"},{ "word" : "le porc", "trn" : "pork"},{ "word" : "le poulet", "trn" : "chicken"},{ "word" : "le beurre", "trn" : "butter"},{ "word" : "le fromage", "trn" : "cheese"},{ "word" : "le lait", "trn" : "milk"},{ "word" : "le yaourt", "trn" : "yogurt"},{ "word" : "le dessert", "trn" : "dessert"},{ "word" : "le biscuit", "trn" : "cookie"},{ "word" : "le chocolat", "trn" : "chocolate"},{ "word" : "le gâteau", "trn" : "cake"},{ "word" : "la glace", "trn" : "ice cream"},{ "word" : "la pizza", "trn" : "pizza"},{ "word" : "le sandwich", "trn" : "sandwich"},{ "word" : "du café (tasse du cafe)", "trn" : "coffee (cup of coffee)"},{ "word" : "thé (tasse du thé)", "trn" : "tea (cup of tea)"},{ "word" : "Vin chaud", "trn" : "mulled wine"},{ "word" : "Bière", "trn" : "beer"}];
+	if(__map_reserved["food"] != null) {
+		_this3.setReserved("food",value3);
+	} else {
+		_this3.h["food"] = value3;
+	}
+};
 var event_Message = { __ename__ : true, __constructs__ : ["SetContent","SetView"] };
 event_Message.SetContent = ["SetContent",0];
 event_Message.SetContent.__enum__ = event_Message;
@@ -1833,6 +1781,25 @@ haxe_ds_StringMap.prototype = {
 		} else {
 			return this.rh["$" + key];
 		}
+	}
+	,keys: function() {
+		return HxOverrides.iter(this.arrayKeys());
+	}
+	,arrayKeys: function() {
+		var out = [];
+		for( var key in this.h ) {
+		if(this.h.hasOwnProperty(key)) {
+			out.push(key);
+		}
+		}
+		if(this.rh != null) {
+			for( var key in this.rh ) {
+			if(key.charCodeAt(0) == 36) {
+				out.push(key.substr(1));
+			}
+			}
+		}
+		return out;
 	}
 };
 var js__$Boot_HaxeError = function(val) {
@@ -2170,6 +2137,22 @@ var React = require("react");
 var ReactDOM = require("react-dom");
 var react_ReactMacro = function() { };
 react_ReactMacro.__name__ = true;
+var utils_ArrayUtil = function() {
+};
+utils_ArrayUtil.__name__ = true;
+utils_ArrayUtil.getRandom = function(array) {
+	var randIdx = Math.floor(Math.random() * array.length);
+	return array[randIdx];
+};
+utils_ArrayUtil.shuffle = function(array,random) {
+	var output = [];
+	var elementIdx;
+	while(array.length > 0) {
+		elementIdx = Math.floor(random() * array.length);
+		output.push(array.splice(elementIdx,1)[0]);
+	}
+	return output;
+};
 function $iterator(o) { if( o instanceof Array ) return function() { return HxOverrides.iter(o); }; return typeof(o.iterator) == 'function' ? $bind(o,o.iterator) : o.iterator; }
 var $_, $fid = 0;
 function $bind(o,m) { if( m == null ) return null; if( m.__id__ == null ) m.__id__ = $fid++; var f; if( o.hx__closures__ == null ) o.hx__closures__ = {}; else f = o.hx__closures__[m.__id__]; if( f == null ) { f = function(){ return f.method.apply(f.scope, arguments); }; f.scope = o; f.method = m; o.hx__closures__[m.__id__] = f; } return f; }
@@ -2199,8 +2182,11 @@ component_Title.displayName = "Title";
 component_WordSelector.displayName = "WordSelector";
 component_sidebar_LeftMenu.displayName = "LeftMenu";
 component_sidebar_Level1Button.displayName = "Level1Button";
+component_vocabulary_Hint.displayName = "Hint";
+component_vocabulary_VocabularyPage.displayName = "VocabularyPage";
 content_ContentContainer.displayName = "ContentContainer";
 content_NotFound.displayName = "NotFound";
+content_a1_Cards.displayName = "Cards";
 content_a1_func_AskDirections.displayName = "AskDirections";
 content_a1_func_BuyTicket.displayName = "BuyTicket";
 content_a1_func_CafeRestaurant.displayName = "CafeRestaurant";
@@ -2230,6 +2216,7 @@ content_a1_gram_WhQuestions101.displayName = "WhQuestions101";
 content_a1_gram_WouldLike.displayName = "WouldLike";
 content_a1_gram_YesNoQuestions.displayName = "YesNoQuestions";
 content_a1_voca_Adjectives1.displayName = "Adjectives1";
+content_a1_voca_Apartment.displayName = "Apartment";
 content_a1_voca_CafeBar.displayName = "CafeBar";
 content_a1_voca_CityNav.displayName = "CityNav";
 content_a1_voca_Clothes.displayName = "Clothes";
@@ -2242,6 +2229,11 @@ content_a1_voca_Numbers.displayName = "Numbers";
 content_a1_voca_Professions.displayName = "Professions";
 content_a1_voca_TrainStation.displayName = "TrainStation";
 content_a1_voca_VerbsOfFirstGroup.displayName = "VerbsOfFirstGroup";
+data_Dictionary.map = new haxe_ds_StringMap();
+data_Dictionary.VERBS_1 = "verbs1";
+data_Dictionary.CLOTHES = "clothes";
+data_Dictionary.ADJECTIVES_1 = "adjectives1";
+data_Dictionary.FOOD = "food";
 logic_WordFormatter.nouns = new logic_NounList();
 Main.main();
 })(typeof exports != "undefined" ? exports : typeof window != "undefined" ? window : typeof self != "undefined" ? self : this);

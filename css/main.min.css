@@ -19,7 +19,7 @@ body{background-color:#e5e5e5;margin:0;}
 .page_example{background-color:lightcyan;outline:2px dashed cadetblue;margin:20px auto;padding:10px;font-style:italic;}
 .compact{width:400px;}
 .comment{font-size:medium;}
-.two_columns{margin:auto;column-count:2;}
+.two_columns{width:70%;margin:auto;column-count:2;}
 .disabled{color:#ccc;}
 .word_selector{background-color:beige;cursor:pointer;}
 .word_selector:focus .selector_content{display:block;}
@@ -31,6 +31,8 @@ body{background-color:#e5e5e5;margin:0;}
 .selector_list{list-style:none;}
 .arrow_left{width:0;height:0;margin:10px 0 0 0;border-right:10px solid deepskyblue;border-bottom:10px solid transparent;border-top:10px solid transparent;}
 .arrow_right{width:0;height:0;margin:10px 0 0 0;border-left:10px solid deepskyblue;border-bottom:10px solid transparent;border-top:10px solid transparent;}
-.msg{padding:10px;color:white;background-color:deepskyblue;min-width:300px;border-radius:4px;z-index:10;cursor:pointer;position:relative;}
+.msg{padding:10px;color:white;background-color:deepskyblue;max-width:500px;min-width:300px;border-radius:4px;z-index:10;cursor:pointer;position:relative;text-align:left;}
 .content_phrase.right{justify-content:flex-end;}
 .hidden{display:none;}
+.trn_hint{background-color:deepskyblue;position:absolute;}
+.word_list{list-style:none;}
